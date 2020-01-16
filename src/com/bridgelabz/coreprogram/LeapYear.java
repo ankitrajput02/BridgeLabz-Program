@@ -7,6 +7,7 @@ public class LeapYear {
 		System.out.println("Enter Year to Check ");
 		int year=Utility.inputNumber();
 		Utility.leapOrNot(year);
+		
 	}
 
 }
