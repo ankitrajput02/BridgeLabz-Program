@@ -1,5 +1,6 @@
 package com.bridgelabz.utility;
 import java.util.Scanner;
+import java.math.*;
 
 
 public class Utility {
@@ -94,7 +95,7 @@ public class Utility {
 		
 		
 		/*Factor of a Number*/
-		public static int factorof(int num) 
+		public static int factorOf(int num) 
 		{
 			int fact=1;
 			for(int i=num;i>=1;i--) {
@@ -111,6 +112,106 @@ public class Utility {
 		//
 		
 		/*2D Array */
+		//Array For Integer
+		public static void arrayCreate(int n,int m) {
+			int[][] arr=new int[n][m];
+		}
+		//For Input	N*M Integer Numbers
+		public static void printWriter(int n,int m) {
+			int[][] arr = new int[n][m];
+			System.out.println("Enter "+n*m+" Elements");
+			for(int i=0;i<n;i++) {
+				for(int j=0;j<m;j++) {
+					arr[i][j]=sc.nextInt();
+				}
+			}
+			System.out.println("Array is..");
+			for(int i=0;i<n;i++) {
+				for(int j=0;j<m;j++) {
+					System.out.print(arr[i][j]+" ");
+				}
+				System.out.println();
+			}
+		}
+		//For Double Numbers
+		public static void printWriterDouble(int n,int m) {
+			double[][] arr = new double[n][m];
+			System.out.println("Enter "+n*m+" Elements");
+			for(int i=0;i<n;i++) {
+				for(int j=0;j<m;j++) {
+					arr[i][j]=sc.nextDouble();
+				}
+			}
+			System.out.println("Array is..");
+			for(int i=0;i<n;i++) {
+				for(int j=0;j<m;j++) {
+					System.out.print(arr[i][j]+"  ");
+				}
+				System.out.println();
+			}
+		}
+		//For Boolean
+		public static void printWriterBoolean(int n,int m) {
+			boolean[][] arr = new boolean[n][m];
+			System.out.println("Enter "+n*m+" Elements");
+			for(int i=0;i<n;i++) {
+				for(int j=0;j<m;j++) {
+					arr[i][j]=sc.nextBoolean();
+				}
+			}
+			System.out.println("Array is..");
+			for(int i=0;i<n;i++) {
+				for(int j=0;j<m;j++) {
+					System.out.print(arr[i][j]+" ");
+				}
+				System.out.println();
+			}
+		}
+
+		
+		
+		//Triplets That Equals to Zero
+		//arr[i]+arr[j]+arr[k]=0
+		public static void tripletAddition(int arr[]) {
+			int count=0;
+			
+			for(int i=0;i < arr.length;i++) {
+				for(int j=i+1;j < arr.length;j++) {
+					for(int k=j+1;k < arr.length;k++) {
+						if(arr[i]+arr[j]+arr[k]==0) {
+							count++;
+							System.out.println(arr[i]+"+"+arr[j]+"+"+arr[k]+"=0");
+						}
+					}
+				}
+			}
+			System.out.println("Total Distinct Triplets "+count);
+		}
+		
+		
+		//Euclidean Distance
+		public static double euclideanDistance(int x,int y) {
+//			double powX=Math.pow((int)x,(int)x);
+//			double powY=Math.pow((int)y,(int)y);
+//			System.out.println(powX);
+//			System.out.println(powY);
+			double powX=(int)x*x;
+			double powY=(int)y*y;
+			double distance=Math.sqrt(powX+powY);
+			return distance;
+		}
+		
+		
+	//Quadratic Equation
+		public static void rootOfX(int a,int b,int c) {
+			double delta=b*b-4*a*c;
+			double rootOneX=(-b+Math.sqrt(delta))/(2*a);
+			System.out.println("Root 1 of X "+rootOneX);
+			double rootTwoX=(-b-Math.sqrt(delta))/(2*a);
+			System.out.println("Root 2 of X "+rootTwoX);
+	
+		}
+		
 		
 
 }
