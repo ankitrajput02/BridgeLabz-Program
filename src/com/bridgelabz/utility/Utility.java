@@ -1,6 +1,5 @@
 package com.bridgelabz.utility;
 import java.util.Scanner;
-import java.math.*;
 
 
 public class Utility {
@@ -113,9 +112,11 @@ public class Utility {
 		
 		/*2D Array */
 		//Array For Integer
-		public static void arrayCreate(int n,int m) {
-			int[][] arr=new int[n][m];
-		}
+		
+//		public static void arrayCreate(int n,int m) {
+//			int[][] arr=new int[n][m];
+//		}
+		
 		//For Input	N*M Integer Numbers
 		public static void printWriter(int n,int m) {
 			int[][] arr = new int[n][m];
@@ -203,6 +204,11 @@ public class Utility {
 		
 		
 	//Quadratic Equation
+		/**
+		 * @param a
+		 * @param b
+		 * @param c
+		 */
 		public static void rootOfX(int a,int b,int c) {
 			double delta=b*b-4*a*c;
 			double rootOneX=(-b+Math.sqrt(delta))/(2*a);
@@ -210,6 +216,17 @@ public class Utility {
 			double rootTwoX=(-b-Math.sqrt(delta))/(2*a);
 			System.out.println("Root 2 of X "+rootTwoX);
 	
+		}
+		
+		
+		//Wind Chill
+		public static void 
+		if( (t > 50) || (v > 120) || ( v < 3) ) {
+			System.out.println("Values Should be in Range");
+		}
+		else {
+			double w = 35.74 +(0.6215*t)-(35.75*Math.pow(v,0.16))+(0.4275*t*Math.pow(v,0.16));
+			System.out.println(w);
 		}
 		
 		
