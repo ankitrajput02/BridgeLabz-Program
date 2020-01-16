@@ -55,8 +55,18 @@ public class Utility {
 			}
 		}
 		
-		/*Some New Code*/
-		//Addd
+		/*Harmonic Value*/
+		public static void harmonicValueOf(int num) {
+			double result=0;
+			if(num!=0) {
+				for(int i=1;i<num;i++) {
+					 result=result+(double)1/i;
+				}
+			System.out.println("Harmonic Value Of "+result);
+			}
+			
+		}
+		/**/
 		
 
 }
