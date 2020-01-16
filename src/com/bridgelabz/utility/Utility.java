@@ -20,7 +20,10 @@ public class Utility {
 			return str;
 		}
 		
+		//
 		//Basic Core Programs
+		//
+		//
 		/*String Replace*/
 		public static String stringReplace(String str1,String str2,String str3) {
 		if(str1.length()>=3){
@@ -102,7 +105,12 @@ public class Utility {
 			return fact;
 		}
 		
-
+		//
+		//Functional Programs
+		//
+		//
+		
+		/*2D Array */
 		
 
 }

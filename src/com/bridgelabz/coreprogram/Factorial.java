@@ -1,4 +1,5 @@
-package com.bridgelabz.utility;
+package com.bridgelabz.coreprogram;
+import com.bridgelabz.utility.Utility;
 
 public class Factorial {
 
