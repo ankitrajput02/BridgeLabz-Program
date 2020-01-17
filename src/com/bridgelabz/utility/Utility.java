@@ -27,6 +27,12 @@ public class Utility {
 			return str;
 		}
 		
+		public static char inputChar() {
+			char ch=sc.next().charAt(0);
+			return ch;
+		}
+		
+		
 		//Basic Core Programs
 		/**
 		 * @param str1 is user input that is name entered by user
@@ -115,18 +121,10 @@ public class Utility {
 			return fact;
 		}
 		
-		//
+		
+		
 		//Functional Programs
-		//
-		//
-		
 		/*2D Array */
-		//Array For Integer
-		
-//		public static void arrayCreate(int n,int m) {
-//			int[][] arr=new int[n][m];
-//		}
-		
 		//For Input	N*M Integer Numbers
 		public static void printWriter(int n,int m) {
 			int[][] arr = new int[n][m];
@@ -268,4 +266,46 @@ public class Utility {
 		System.out.println("Percentage of Winning "+percentage);
 		return win;
 		}
+		
+		
+		
+		/**
+		 * @param num integer number that shows how many random numbers are required
+		 * @return distinct elements/number and Total random no required to generate distinct numbers
+		 */
+		public static int couponNumber(int num) {
+			int count=0,distinct=0;
+			boolean newNum[]=new boolean[num];
+			while(distinct<num) 
+			{
+				int number=(int)(Math.random()*num);
+				count++;
+				if(!newNum[number]) {		//if number is not present in newNum array then it will print
+					System.out.print(number+" ");	
+					distinct++;			//if number is new then distinct increases
+					newNum[number]=true;	
+				}
+			
+			}
+			System.out.println("\nTotal random number required "+count);
+			return distinct;
+			}
+		
+		//stopwatch start
+		/**
+		 * @param start is long value which contain time in millis
+		 * @param end is long value which contain time in millis
+		 * @return time in sec
+		 */
+		public static long stopwatch(long start,long end) {
+			long time=(end-start)/1000;
+			//System.out.println("Stopwatch time "+(double)value/1000+" Sec");
+			return time;
+		}
+		
+		//Tic-tac-toe
+		
+	
+	
+				
 }
