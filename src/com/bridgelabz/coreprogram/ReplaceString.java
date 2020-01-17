@@ -1,3 +1,10 @@
+/**
+ * Created By:Ankit Rajput
+ * Purpose:User Input and Replace String Template “Hello <<UserName>>, How are you?” 
+ *			I/P -> Take User Name as Input. Ensure UserName has min 3 char
+ *			O/P -> Print the String with User Name 
+ * Date:16/01/2020 
+ */
 package com.bridgelabz.coreprogram;
 import com.bridgelabz.utility.Utility;
 public class ReplaceString {
@@ -16,6 +23,5 @@ public class ReplaceString {
 		else{
 			System.out.println("Please Enter Valid User Name");
 		}
-
 	}
 }

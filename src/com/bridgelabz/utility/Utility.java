@@ -4,27 +4,36 @@ import java.util.Scanner;
 
 public class Utility {
 		static Scanner sc=new Scanner(System.in);
-		//for input integer
+		/**accept input type integer number
+		 * @return integer number 
+		 */
 		public static int inputNumber() {
 			int num=sc.nextInt();
 			return num;
 		}
-		//for input Double
+		/**
+		 * accept input type double
+		 * @return double number
+		 */
 		public static double inputDouble() {
 			double num=sc.nextDouble();
 			return num;
 		}
-		//for input String
+		/**accept string from user
+		 * @return String
+		 */
 		public static String inputString() {
 			String str=sc.next();
 			return str;
 		}
 		
-		//
 		//Basic Core Programs
-		//
-		//
-		/*String Replace*/
+		/**
+		 * @param str1 is user input that is name entered by user
+		 * @param str2 Original string
+		 * @param str3 String that is replace with user input
+		 * @return string with user name
+		 */
 		public static String stringReplace(String str1,String str2,String str3) {
 		if(str1.length()>=3){
 			String replaceString=str2.replace(str3, str1);
@@ -72,6 +81,7 @@ public class Utility {
 				while(i<=num) 
 				{
 				result=result*2;	
+				System.out.print(result+" ");
 				i++;
 				}
 				System.out.println("2^"+num+"="+result);
@@ -192,10 +202,6 @@ public class Utility {
 		
 		//Euclidean Distance
 		public static double euclideanDistance(int x,int y) {
-//			double powX=Math.pow((int)x,(int)x);
-//			double powY=Math.pow((int)y,(int)y);
-//			System.out.println(powX);
-//			System.out.println(powY);
 			double powX=(int)x*x;
 			double powY=(int)y*y;
 			double distance=Math.sqrt(powX+powY);
@@ -203,11 +209,11 @@ public class Utility {
 		}
 		
 		
-	//Quadratic Equation
+		//Quadratic Equation
 		/**
-		 * @param a
-		 * @param b
-		 * @param c
+		 * @param a number which pass the value of A
+		 * @param b number which pass the value of B
+		 * @param c	number which pass the value of C
 		 */
 		public static void rootOfX(int a,int b,int c) {
 			double delta=b*b-4*a*c;
@@ -220,15 +226,46 @@ public class Utility {
 		
 		
 		//Wind Chill
-		public static void 
-		if( (t > 50) || (v > 120) || ( v < 3) ) {
-			System.out.println("Values Should be in Range");
-		}
-		else {
-			double w = 35.74 +(0.6215*t)-(35.75*Math.pow(v,0.16))+(0.4275*t*Math.pow(v,0.16));
-			System.out.println(w);
-		}
+		/**
+		 * @param t is temperature in Fahrenheit
+		 * @param v is Wind Speed (in mph)
+		 * @return w is wind chill (Fahrenheit)
+		 */
+		public static double windChill(double t,double v) {
+			double w=0.0;
+			if( (t < 50) && (v < 120) && ( v > 3) ) {
+				w = 35.74 +(0.6215*t)-(35.75*Math.pow(v,0.16))+(0.4275*t*Math.pow(v,0.16));
+			}
+			else {
+				System.out.println("Values Should be in Range");
+			}
+			return w;
 		
 		
-
+		}
+	
+	
+		//Gambler
+		/**
+		 * @param stack is integer number
+		 * @param goal is integer number
+		 * @param play is integer number which is shows how many times while loop executes
+		 * @return win integer number that shows no of times user wins
+		 */
+		public static int gamePlay(int stack,int goal,int play) {
+		int win=0,counter=0;
+		while(counter < play && stack > 0 && goal > stack) {
+			if(Math.random()>0.5) {
+				win++;
+			}
+			else {
+				stack--;
+			}
+		counter++;
+		}
+		//System.out.println("Win "+win);
+		double percentage=(double)win/play*100;
+		System.out.println("Percentage of Winning "+percentage);
+		return win;
+		}
 }
