@@ -23,20 +23,6 @@ public class Gambler {
 		int play=Utility.inputNumber();
 		int win=Utility.gamePlay(stack, goal, play);
 		System.out.println("Win "+win);
-		
-//		int win=0,counter=0;
-//		while(counter < play && stack > 0 && goal > stack) {
-//			if(Math.random()>0.5) {
-//				win++;
-//			}
-//			else {
-//				stack--;
-//			}
-//		counter++;
-//		}
-//		System.out.println("Win "+win);
-//		System.out.println("Percentage of Winning "+(double)win/play*100);
-		
-	}
+		}
 
 }
