@@ -305,7 +305,22 @@ public class Utility {
 		
 		//Tic-tac-toe
 		
-	
+		//Vending Machin
+		/**
+		 * @param amount is integer number which is entered by user
+		 */
+		public static int calculateNotes(int amount) {
+			int notes[]= {1000,500,100,50,20,10,5,2,1};
+			int[] noteCounts= new int[notes.length];
+			for(int i=0;i<notes.length;i++) {
+				if(amount>=notes[i] && amount !=0) {
+					noteCounts[i]=amount/notes[i];
+					System.out.println(notes[i]+"X"+noteCounts[i]+"="+notes[i]*noteCounts[i]);
+					amount-=notes[i]*noteCounts[i];
+				}
+			}
+			return amount;
+		}
 	
 				
 }
