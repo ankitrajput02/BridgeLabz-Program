@@ -2,6 +2,10 @@ package com.bridgelabz.utility;
 import java.util.Scanner;
 
 
+/**
+ * @author admin1
+ *
+ */
 public class Utility {
 		static Scanner sc=new Scanner(System.in);
 		/**accept input type integer number
@@ -321,6 +325,136 @@ public class Utility {
 			}
 			return amount;
 		}
-	
-				
+		
+		//Tremperature Connversion
+		/**Purpose:The temperature in fahrenheit as input outputs the temperature in Celsius or viceversa 
+		 * using the formula Celsius to Fahrenheit:   (°C × 9/5) + 32 = °F
+		 *					 Fahrenheit to Celsius:   (°F − 32) x 5/9 = °C
+		 */
+		
+		/**
+		 * @param ch integer input to select Choice
+		 */
+		public static void tempConvert(int ch){
+		switch(ch) {
+		case 1:
+			System.out.println("Enter temperature in fahrenheit ");
+			int f=Utility.inputNumber();
+			int c=(f-32)*5/9;
+			System.out.println("Temperature Fahrenheit "+f+" F into Celsius "+c+" C");
+			break;
+		case 2:
+			System.out.println("Enter temperature in Celsius ");
+			int c1=Utility.inputNumber();
+			int f1=(c1*9/5)+32;
+			System.out.println("Temperature Celsius "+c1+" C into Fahrenheit "+f1+" F");
+			break;
+		default:
+			System.out.println("Select Correct choice");
+			break;
+		}
+		}
+		
+		//Decimal To Binary
+		
+		/**Program to convert Decimal number into Binary by using toBinary() static method
+		 * @param number integer input enter by User
+		 */
+		public static void toBinary(int number) {
+		String str="";
+		if(number>0) {
+			while(number!=0) {
+				if(number%2==0) {
+					str=str+"0";
+				}
+				else {
+					str=str+"1";
+				}
+				number=(int)number/2;
+			}
+			
+		}
+		for(int i=str.length()-1;i>=0;i--) {
+			System.out.print(str.charAt(i)+" ");
+		}
+		}
+		
+		//To the Util Class add dayOfWeek static function that takes a date as input and prints the day of the
+		//week that date falls on.
+		/**
+		 * @param y integer for input year
+		 * @param m integer for input month
+		 * @param d integer for date
+		 */
+		public static void dayOfWeek(int y,int m,int d) {
+		int y0=y-(14-m)/12;
+		int x=y0+y0/4-y0/100+y0/400;
+		int m0=m+12*((14-m)/12)-2;
+		int d0 = (d + x + (m0*31) / 12) % 7;
+		switch(d0) {
+		case 0:
+			System.out.println("Sunday");
+			break;
+		case 1:
+			System.out.println("Monday");
+			break;
+		case 2:
+			System.out.println("Tuesday");
+			break;
+		case 3:
+			System.out.println("Wednesday");
+			break;
+		case 4:
+			System.out.println("Thursday");
+			break;
+		case 5:
+			System.out.println("Friday");
+			break;
+		case 6:
+			System.out.println("Saturday");
+			break;
+		
+		}
+	}
+	/* Write a Util Static Function to calculate monthlyPayment that reads in three command-line arguments 
+	 * P, Y, and R and calculates the monthly payments you would have to make over Y years to pay off a P 
+	 * principal loan amount at R per cent interest compounded monthly.
+	 */
+		//monthly payment
+		public static int monthlyPayment(int p,int r,int n){
+			return (int) ((p*r)/(1-Math.pow((1+r),(-n))));
+		}
+		//rate of interest
+		public static int rateOfInterest(int rate) {
+			return rate/(12*100);
+		}
+		//year
+		public static int year(int y) {
+			return y*12;
+		}
+		//Total Interest
+		public static int totalInterest(int payment, int n, int p) {
+			// TODO Auto-generated method stub
+			return payment*n-p;
+		}
+		
+		
+		
+		//Program to find Prime numbers from range
+		public static void primeRange(int start,int end){
+			for(int i=start;i<end;i++) 
+			{
+				int flag=0;
+				for(int j=2;j<i;j++) 
+				{
+					if(i%j==0) {
+						flag=1;
+					}
+				}
+				if(flag==0) {
+					System.out.println(i);
+				}
+			}
+		}
+		
 }
