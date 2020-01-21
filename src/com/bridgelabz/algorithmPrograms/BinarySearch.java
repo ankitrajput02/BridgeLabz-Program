@@ -1,32 +1,24 @@
 package com.bridgelabz.algorithmPrograms;
+import com.bridgelabz.utility.Utility;
 
-import java.io.FileWriter;
-import java.util.Scanner;
+/**Title:Binary Search the Word from Word List
 
+ * created by:Ankit Rajput
+ *
+ */
 public class BinarySearch {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args){
 		// TODO Auto-generated method stub
-		String[] st=new String[10];
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter Data");
-		for(int i=0;i<)
-		String str=sc.next();
-		System.out.println("Enter Word to Find from file");
-		String find=sc.next();
-		FileWriter fw=new FileWriter("/home/admin1/Desktop/files/sample.txt");
-		for(int i=0;i<str.length();i++) {
-			if(str.charAt(i)==',') {
-				fw.write("\n");
-			}
-			else {
-				fw.write(str.charAt(i));
-			}
+		String arr[]= {"ankit","chetan","ganesh","ishan","lalit","zzzz"};
+		System.out.println("Enter word to Search");
+		String key=Utility.inputString();
+		int result=Utility.binarySearch(arr, key);	
+		if(result == -1) {
+			System.out.println("Word Not Found");
 		}
-		fw.close();
-		for(int i=0;i<find.length();i++) {
-			for(int j=0;j<str.length();j++) {
-				
+		else{
+			System.out.println("Word Found At "+result);
 		}
 	}
 	

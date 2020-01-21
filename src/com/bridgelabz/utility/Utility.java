@@ -473,4 +473,48 @@ public class Utility {
 			return n;
 		}
 		
+		//Binary Search
+		/**
+		 * @param arr String Array
+		 * @param key data type is String which is entered by the user to search in the array
+		 * @return 0 or -1 if element present 0 will be return else -1 will be return
+		 */
+		public static int binarySearch(String arr[],String key) {
+		int low=0;
+		int high=arr.length-1;
+			while (low <= high) {
+				int mid=low+(high-low) / 2;
+				int res=key.compareTo(arr[mid]);
+				if(res==0) {
+					return mid;
+				}
+				if(res > 0) {
+					low=mid+1;
+				}
+				else {
+					high=mid-1;
+				}
+			}
+			return -1;
+		}
+		
+		//Insertion Sort
+		/**
+		 * @param arr Array of Integer which is to sort
+		 */
+		public static void insertionSort(int arr[]) {
+		int size=arr.length;
+		for(int i=1;i<size;i++) {
+			int key=arr[i];
+			int j=i-1;
+			while(j>=0 && arr[j] > key) {
+				arr[j+1]=arr[j];
+				j=j-1;
+			}
+			arr[j+1]=key;
+		}
+		for(int i=0;i<size;i++) {
+		System.out.print(arr[i]+" ");
+		}
+		}
 }
