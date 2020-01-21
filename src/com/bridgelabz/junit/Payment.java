@@ -19,5 +19,4 @@ public class Payment {
 		System.out.println("Interest "+interest);
 		System.out.println("Payment "+payment);
 	}
-
 }

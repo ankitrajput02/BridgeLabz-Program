@@ -2,7 +2,7 @@ package com.bridgelabz.junit;
 import com.bridgelabz.utility.Utility;
 
 /**
- * Purpose:The temperature in fahrenheit as input outputs the temperature in Celsius or viceversa 
+ * Title:The temperature in fahrenheit as input outputs the temperature in Celsius or viceversa 
  * using the formula Celsius to Fahrenheit:   (°C × 9/5) + 32 = °F
  *					 Fahrenheit to Celsius:   (°F − 32) x 5/9 = °C
  *	
@@ -17,5 +17,4 @@ public class TemperatureConversion {
 		Utility.tempConvert(ch);
 		
 	}
-
 }

@@ -2,7 +2,7 @@ package com.bridgelabz.logicalprogram;
 import com.bridgelabz.utility.Utility;
 
 /**Created By:Ankit Rajput
- * Purpose:Stopwatch Program for measuring the time that elapses between the start and end clicks
+ * Title:Stopwatch Program for measuring the time that elapses between the start and end clicks
  * I/P -> Start the Stopwatch and End the Stopwatch
  * O/P -> Print the elapsed time.
  * Date:17/01/2020
@@ -23,5 +23,4 @@ public class Stopwatch {
 		}
 		System.out.println("Elapsed time "+(double)Utility.stopwatch(start,end)+" Sec");
 	}
-
 }

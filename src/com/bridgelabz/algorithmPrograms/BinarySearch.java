@@ -12,8 +12,8 @@ public class BinarySearch {
 		// TODO Auto-generated method stub
 		String arr[]= {"ankit","chetan","ganesh","ishan","lalit","zzzz"};
 		System.out.println("Enter word to Search");
-		String key=Utility.inputString();
-		int result=Utility.binarySearch(arr, key);	
+		String key=Utility.inputString();	//word to search
+		int result=Utility.binarySearch(arr, key);	//arr is list of words
 		if(result == -1) {
 			System.out.println("Word Not Found");
 		}

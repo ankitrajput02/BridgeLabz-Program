@@ -19,5 +19,4 @@ public class Quadratic {
 		Utility.rootOfX(a, b, c);
 		
 	}
-
 }

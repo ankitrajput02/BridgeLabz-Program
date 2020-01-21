@@ -1,6 +1,6 @@
 /**
  * Created By:Ankit Rajput
- * Purpose: Flip Coin and print percentage of Heads and Tails
+ * Title: Flip Coin and print percentage of Heads and Tails
  *			I/P -> The number of times to Flip Coin
  *			O/P -> Percentage of Head vs Tails
  * Date:16/01/2020 
@@ -17,19 +17,19 @@ public class FlipCoin {
 		int tail=0,head=0;
 		if(flip>0) {
 			int counter=0;
-			while(counter < flip) {
-				if(Math.random() < 0.5) {
+			while(counter < flip) { //counter use to repeat while loop upto no of times Flip
+				if(Math.random() < 0.5) {  //Math.random() returns value of double data type
 					tail++;
 				}
 				else {
 					head++;
 				}
-			counter++;	
+			counter++;				
 			}
 			System.out.println("No of Heads"+head);
 			System.out.println("No of Tails"+tail);
-			System.out.println("Head Percentage "+Utility.headPercentage(head, flip));
-			System.out.println("Tail Percentage "+Utility.tailPercentage(tail, flip));
+			System.out.println("Head Percentage "+Utility.headPercentage(head, flip)); //no of heads And Flip
+			System.out.println("Tail Percentage "+Utility.tailPercentage(tail, flip)); //no of tails And Flip
 		}
 	}
 }

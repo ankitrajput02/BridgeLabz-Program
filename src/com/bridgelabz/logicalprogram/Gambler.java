@@ -24,5 +24,4 @@ public class Gambler {
 		int win=Utility.gamePlay(stack, goal, play);
 		System.out.println("Win "+win);
 		}
-
 }

@@ -20,5 +20,4 @@ public class CouponNumbers {
 		int num=Utility.inputNumber();
 		Utility.couponNumber(num);
 	}
-
 }

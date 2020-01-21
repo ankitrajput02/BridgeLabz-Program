@@ -1,8 +1,8 @@
 package com.bridgelabz.junit;
 import com.bridgelabz.utility.Utility;
 
-/**
- * Purpose: To the Util Class add dayOfWeek static function that takes a date as input and prints the day of the
+/**Created By:Ankit Rajput
+ * Title: To the Util Class add dayOfWeek static function that takes a date as input and prints the day of the
  * week that date falls on.For m use 1 for January, 2 for February, and so forth.
  * formulas, for the Gregorian calendar (where / denotes integer division):
  * y0 = y − (14 − m) / 12

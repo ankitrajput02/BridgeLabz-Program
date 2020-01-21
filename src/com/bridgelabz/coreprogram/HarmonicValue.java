@@ -1,6 +1,6 @@
 /**
  * Created By:Ankit Rajput
- * Purpose: Prints the Nth harmonic number: 1/1 + 1/2 + ... + 1/N 
+ * Title: Prints the Nth harmonic number: 1/1 + 1/2 + ... + 1/N 
  *			I/P -> The Harmonic Value N. Ensure N != 0
  *			O/P -> Print the Nth Harmonic Value. 
  * Date:16/01/2020 
@@ -15,4 +15,3 @@ public class HarmonicValue {
 		Utility.harmonicValueOf(num);
 	}
 }
- 

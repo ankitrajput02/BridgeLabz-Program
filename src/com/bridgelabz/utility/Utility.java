@@ -1,4 +1,5 @@
 package com.bridgelabz.utility;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -55,21 +56,35 @@ public class Utility {
 		return str3;
 		}
 		
-		/*For Flip Coin Percentage*/
+		/*Title: Flip Coin Percentage Using Math.random Function*/
 		//For Tail Percentage
+		/**
+		 * @param tail integer number
+		 * @param flip number of times coin flip
+		 * @return double Tail Percentage
+		 */
 		public static double tailPercentage(int tail,int flip) {
 			return (100*(double)tail)/flip;
 		}
 		//For Head Percentage
+		/**
+		 * @param head integer number
+		 * @param flip number of times coin flip
+		 * @return double Head Percentage
+		 */
 		public static double headPercentage(int head,int flip) {
 			return (100*(double)head)/flip;
 		}
 		
 		
-		/*Year is Leap or Not*/
+		/*Title:Program to print Year is Leap or Not*/
+		/**
+		 * @param year integer value
+		 * @return year is leap or not
+		 */
 		public static boolean leapOrNot(int year) {
 			if(year>=1000||year<9999){
-				if(year % 400==0 || year % 4 ==0 && year % 100 != 0) {
+				if(year % 400==0 || year % 4 ==0 && year % 100 != 0) { //year % 400 & 4==0 is leap.But year % 100==0 is not Leap year
 					System.out.println("Leap Year");
 					return true;
 				}
@@ -83,7 +98,11 @@ public class Utility {
 			
 		}
 		
-		/*For Power of 2*/
+		/*Title:Program To find Power of 2 of N*/
+		/**
+		 * @param num integer number from command line
+		 * @return power of 2
+		 */
 		public static int powerOfTwo(int num) {
 			if(num>=0 && num <31 ) {
 				int i=1;
@@ -99,26 +118,33 @@ public class Utility {
 			return num;
 		}
 		
-		/*Harmonic Value*/
+		/*Title: Program To print harmonic value of a number*/
+		/**
+		 * @param num integer
+		 * @return double harmonic value
+		 */
 		public static double harmonicValueOf(int num) {
 			double result=0;
 			if(num!=0) {
 				for(int i=1;i<num;i++) {
-					 result=result+(double)1/i;
+					 result=result+(double)1/i;	//1/1 + 1/2 + ... + 1/num
 				}
 			System.out.println("Harmonic Value Of "+result);
 			}
 			return result;
 			
 		}
-		
-		
-		/*Factor of a Number*/
+				
+		/*Print Factors And factorial of a Number */
+		/**
+		 * @param num integer type
+		 * @return fact Factorial of num
+		 */
 		public static int factorOf(int num) 
 		{
-			int fact=1;
-			for(int i=num;i>=1;i--) {
-				fact=fact*i;
+			int fact=1;					//initialise fact=1
+			for(int i=num;i>=1;i--) {	//run for from num to 1
+				fact=fact*i;			//multiply num with decreament i
 				System.out.print(i+" ");
 			}
 			System.out.println("\nFacforial of "+num+" is "+fact);
@@ -128,8 +154,14 @@ public class Utility {
 		
 		
 		//Functional Programs
-		/*2D Array */
+		/*Title: A library for reading in 2D arrays of integers, doubles, or booleans from standard input
+		 * and printing them out to standard output.*/
 		//For Input	N*M Integer Numbers
+		
+		/**
+		 * @param n no of rows integer
+		 * @param m no of columns integer
+		 */
 		public static void printWriter(int n,int m) {
 			int[][] arr = new int[n][m];
 			System.out.println("Enter "+n*m+" Elements");
@@ -146,7 +178,12 @@ public class Utility {
 				System.out.println();
 			}
 		}
-		//For Double Numbers
+		//function to create array to store double Numbers
+		/**
+		 * @param n no of rows
+		 * @param m	no of columns
+		 */
+		//function to create array to store integer Numbers
 		public static void printWriterDouble(int n,int m) {
 			double[][] arr = new double[n][m];
 			System.out.println("Enter "+n*m+" Elements");
@@ -163,7 +200,7 @@ public class Utility {
 				System.out.println();
 			}
 		}
-		//For Boolean
+		//Fuction to create array to store Boolean data type
 		public static void printWriterBoolean(int n,int m) {
 			boolean[][] arr = new boolean[n][m];
 			System.out.println("Enter "+n*m+" Elements");
@@ -183,8 +220,11 @@ public class Utility {
 
 		
 		
-		//Triplets That Equals to Zero
-		//arr[i]+arr[j]+arr[k]=0
+		
+		/**Title:Program to print no of triplets=zero
+		 * arr[i]+arr[j]+arr[k]==0
+		 * @param arr of integer
+		 */
 		public static void tripletAddition(int arr[]) {
 			int count=0;
 			
@@ -202,7 +242,13 @@ public class Utility {
 		}
 		
 		
-		//Euclidean Distance
+		/*Title: program Distance.java that takes two integer command-line arguments x and y and prints
+	  	   the Euclidean distance from the point (x, y) to the origin (0, 0).*/
+		/**
+		 * @param x integer value
+		 * @param y integer value
+		 * @return distance double data type
+		 */
 		public static double euclideanDistance(int x,int y) {
 			double powX=(int)x*x;
 			double powY=(int)y*y;
@@ -211,7 +257,7 @@ public class Utility {
 		}
 		
 		
-		//Quadratic Equation
+		//Title:Program for Quadratic Equation
 		/**
 		 * @param a number which pass the value of A
 		 * @param b number which pass the value of B
@@ -247,7 +293,7 @@ public class Utility {
 		}
 	
 	
-		//Gambler
+		//Title:Simulates a gambler who start with $stake and place fair $1 bets until he/she goes broke
 		/**
 		 * @param stack is integer number
 		 * @param goal is integer number
@@ -257,11 +303,11 @@ public class Utility {
 		public static int gamePlay(int stack,int goal,int play) {
 		int win=0,counter=0;
 		while(counter < play && stack > 0 && goal > stack) {
-			if(Math.random()>0.5) {
-				win++;
+			if(Math.random()>0.5) {		//if Math.random() returns double type of data
+				win++;					//if value>0.5 then win increases
 			}
 			else {
-				stack--;
+				stack--;				//if value<0.5 then stack/money decreases
 			}
 		counter++;
 		}
@@ -295,7 +341,7 @@ public class Utility {
 			return distinct;
 			}
 		
-		//stopwatch start
+		//Title:Stopwatch Program for measuring the time that elapses between the start and end clicks
 		/**
 		 * @param start is long value which contain time in millis
 		 * @param end is long value which contain time in millis
@@ -309,17 +355,17 @@ public class Utility {
 		
 		//Tic-tac-toe
 		
-		//Vending Machin
+		//Title:Program for Vending Machine
 		/**
 		 * @param amount is integer number which is entered by user
 		 */
 		public static int calculateNotes(int amount) {
-			int notes[]= {1000,500,100,50,20,10,5,2,1};
-			int[] noteCounts= new int[notes.length];
+			int notes[]= {1000,500,100,50,20,10,5,2,1};	//Array which contains notes
+			int[] noteCounts= new int[notes.length];	//Array to store no of Notes use to Change
 			for(int i=0;i<notes.length;i++) {
 				if(amount>=notes[i] && amount !=0) {
 					noteCounts[i]=amount/notes[i];
-					System.out.println(notes[i]+"X"+noteCounts[i]+"="+notes[i]*noteCounts[i]);
+					System.out.println(notes[i]+"X"+noteCounts[i]+"="+notes[i]*noteCounts[i]);//no of notes
 					amount-=notes[i]*noteCounts[i];
 				}
 			}
@@ -357,29 +403,29 @@ public class Utility {
 		
 		//Decimal To Binary
 		
-		/**Program to convert Decimal number into Binary by using toBinary() static method
+		/**Title:Program to convert Decimal number into Binary by using toBinary() static method
 		 * @param number integer input enter by User
 		 */
 		public static void toBinary(int number) {
-		String str="";
+		String str="";				//String to store output
 		if(number>0) {
-			while(number!=0) {
-				if(number%2==0) {
-					str=str+"0";
+			while(number!=0) {		//loop run upto number=0
+				if(number%2==0) {  
+					str=str+"0";	//if even no in string 0 is store
 				}
 				else {
-					str=str+"1";
+					str=str+"1";	//if odd no in string 1 is store
 				}
-				number=(int)number/2;
+				number=(int)number/2; //number decrement
 			}
 			
 		}
 		for(int i=str.length()-1;i>=0;i--) {
-			System.out.print(str.charAt(i)+" ");
+			System.out.print(str.charAt(i)+" "); //to print binary output reverse order
 		}
 		}
 		
-		//To the Util Class add dayOfWeek static function that takes a date as input and prints the day of the
+		//Title:To the Util Class add dayOfWeek static function that takes a date as input and prints the day of the
 		//week that date falls on.
 		/**
 		 * @param y integer for input year
@@ -390,7 +436,7 @@ public class Utility {
 		int y0=y-(14-m)/12;
 		int x=y0+y0/4-y0/100+y0/400;
 		int m0=m+12*((14-m)/12)-2;
-		int d0 = (d + x + (m0*31) / 12) % 7;
+		int d0 = (d + x + (m0*31) / 12) % 7;	//output is from 0 to 6
 		switch(d0) {
 		case 0:
 			System.out.println("Sunday");
@@ -439,8 +485,29 @@ public class Utility {
 		}
 		
 		
-		
+		//Permutation of String
+		/**
+		 * @param str input string
+		 * @param temp output permutation of string
+		 */
+		public static void permutation(String str,String temp) {
+			int n=str.length();
+			if(n==0) {
+				System.out.println(temp+" ");
+				return;
+			}
+			for(int i=0;i<n;i++) {
+				char ch=str.charAt(i);
+				String left=str.substring(0, i)+str.substring(i+1);
+				permutation(left,temp+ch);
+			}
+			
+		}
 		//Program to find Prime numbers from range
+		/**
+		 * @param start integer number
+		 * @param end integer number
+		 */
 		public static void primeRange(int start,int end){
 			for(int i=start;i<end;i++) 
 			{
@@ -459,11 +526,16 @@ public class Utility {
 		
 		
 		
-		//Bubble Sort
+		//Title:Program for Bubble Sort
+		/**
+		 * @param arr String array which unsorted
+		 * @param n integer size of Array
+		 * @return Sorted Array
+		 */
 		public static int bubbleSort(int[] arr,int n) {
 			for(int i=1;i<=n -1;i++) {
 				for(int j=0;j< n-1-i;j++) {
-					if(arr[j]>arr[j+1]) {
+					if(arr[j]>arr[j+1]) {	//if greater then swap it
 						int temp=arr[j];
 						arr[j]=arr[j+1];
 						arr[j+1]=temp;
@@ -473,7 +545,7 @@ public class Utility {
 			return n;
 		}
 		
-		//Binary Search
+		//Title: Binary Search of String
 		/**
 		 * @param arr String Array
 		 * @param key data type is String which is entered by the user to search in the array
@@ -498,7 +570,7 @@ public class Utility {
 			return -1;
 		}
 		
-		//Insertion Sort
+		//Title:Program for Insertion Sort
 		/**
 		 * @param arr Array of Integer which is to sort
 		 */
@@ -517,4 +589,135 @@ public class Utility {
 		System.out.print(arr[i]+" ");
 		}
 		}
+		
+		//Title:Program for Merge Sort
+		/**
+		 * @param arr Array list
+		 * @param l left side index value
+		 * @param mid integer value
+		 * @param r right side index value
+		 * @return Sorted Array
+		 */
+		public static String[] mergeSort(String[] arr,int l,int mid,int r) {
+			int n1=mid-l+1;
+			int n2=r-mid;
+			 String L[] = new String[n1]; 
+		     String R[] = new String[n2]; 
+	 
+		     for (int i=0; i<n1; i++)
+		    	 L[i] = arr[l + i];
+		     for (int j=0; j<n2; ++j)
+		    	 R[j] = arr[mid + 1+ j]; 
+		     // Initial indexes of first and second subarrays 
+		      int i = 0, j = 0; 
+		      // Initial index of merged subarry array 
+		      int k = l; 
+		      while (i < n1 && j < n2) 
+		      { 
+		    	  if (L[i].compareTo(R[j]) < 0){
+		    		  arr[k] = L[i]; 
+		    		  i++; 
+		    	  } 
+		    	  else{
+		    		  arr[k] = R[j];
+		    		  j++; 
+		    	  }
+		      k++; 
+		      } 
+
+		        /* Copy remaining elements of L[] if any */
+		        while (i < n1) 
+		        { 
+		            arr[k] = L[i]; 
+		            i++; 
+		            k++; 
+		        } 
+		  
+		        /* Copy remaining elements of R[] if any */
+		        while (j < n2) 
+		        { 
+		            arr[k] = R[j]; 
+		            j++; 
+		            k++; 
+		        }
+				return R; 
+		  }
+		//Program to Sort
+		 public static void sort(String arr[], int l, int r) 
+		    { 
+		        if (l < r) 
+		        { 
+		            // Find the middle point 
+		            int mid = (l+r)/2; 
+		  
+		            // Sort first and second halves 
+		            sort(arr, l, mid); 
+		            sort(arr, mid+1, r); 
+		  
+		            // Merge the sorted halves 
+		            mergeSort(arr, l, mid, r); 
+		        } 
+		    }
+		 //To print Array
+		    public static void printArray(String arr[]) 
+		    { 
+		        int n = arr.length; 
+		        for (int i=0; i<n; i++) 
+		            System.out.print(arr[i]+" "); 
+		        System.out.println(); 
+		    }
+
+		    
+		    //Title: String is Anagram or Not
+		    public static String sortString(String string) 
+		    { 
+		        // convert input string to char array 
+		        char tempArray[] = string.toCharArray(); 
+		          
+		        // sort tempArray 
+		        Arrays.sort(tempArray); 
+		          
+		        // return new sorted string 
+		        return new String(tempArray); 
+		    } 
+		    
+		    //PrimePalindrom
+		    /**
+		     * Title:Program to Print prime palindrome numbers
+		     *
+		     */
+		    /**
+		     * @param start integer
+		     * @param end integer
+		     */
+		    public static void primePalindrom(int start,int end){
+		    		for(int i=start;i<end;i++) 
+		    		{
+		    			int flag=0;
+		    			for(int j=2;j<i;j++) 
+		    			{
+		    				if(i%j==0) {
+		    					flag=1;
+		    				}
+		    			}
+		    			if(flag==0) {
+		    				
+		    				palindrom(i);
+		    				
+		    			}
+		    		}
+		    }
+		   	public static void palindrom(int i) {
+		   		int temp = 0, remainder;
+		   		int num=i;
+		   		while (i != 0) {
+	    	        remainder = i % 10;
+	    	        temp = temp * 10 + remainder;
+	    	        i /= 10;
+	    	    }
+		        // palindrome if num and temp is equal
+		    	if (num == temp)
+		   	        System.out.println(num);
+		   	}
+			
 }

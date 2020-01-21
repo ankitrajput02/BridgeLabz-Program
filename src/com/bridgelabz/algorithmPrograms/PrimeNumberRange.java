@@ -3,7 +3,7 @@ package com.bridgelabz.algorithmPrograms;
 import com.bridgelabz.utility.Utility;
 
 /**
- * 	Purpose:To find the prime numbers between 0-1000
+ * 	Title:To find the prime numbers between 0-1000
  *	
  */
 public class PrimeNumberRange {

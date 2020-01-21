@@ -1,6 +1,6 @@
 /**
  * Created By:Ankit Rajput
- * Purpose:Computes the prime factorization of N using brute force and Print the Factorial of a Number
+ * Title:Computes the prime factorization of N using brute force and Print the Factorial of a Number
  * Date:16/01/2020 
  *
  *

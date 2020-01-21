@@ -18,5 +18,4 @@ public class VendingMachine {
 		Utility.calculateNotes(amount);
 	}
 
-	
 }

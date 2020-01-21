@@ -15,5 +15,4 @@ public class BinaryConversion {
 		int number=Utility.inputNumber();
 		Utility.toBinary(number);
 	}
-
 }
