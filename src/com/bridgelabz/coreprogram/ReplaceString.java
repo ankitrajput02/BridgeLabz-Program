@@ -13,8 +13,8 @@ public class ReplaceString {
 		
 		System.out.println("Enter User Name");
 		String s1=Utility.inputString();	//user input string
-		String s2="Hello <<UserName>>,How are you?";//original String
-		String s3="<<UserName>>";		//second string which is replace with//regex
+		String s2="Hello UserName,How are you?";//original String
+		String s3="UserName";		//second string which is replace with
 		
 		if(s1.length()>=3){
 			String replaceString=s2.replace(s3, s1);

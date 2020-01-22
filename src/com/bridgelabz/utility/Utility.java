@@ -1,5 +1,6 @@
 package com.bridgelabz.utility;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.io.IOException;
 import java.io.BufferedReader;
@@ -14,8 +15,14 @@ public class Utility {
 		/**accept input type integer number
 		 * @return integer number 
 		 */
+		
 		public static int inputNumber() {
-			int num=sc.nextInt();
+			int num = 0;
+			try {
+			num=sc.nextInt();
+			}catch(Exception e) {
+				System.out.println("Exception:Please Enter the Number");
+			}
 			return num;
 		}
 		/**
@@ -23,19 +30,35 @@ public class Utility {
 		 * @return double number
 		 */
 		public static double inputDouble() {
-			double num=sc.nextDouble();
+			double num=0.0;
+			try {
+			num=sc.nextDouble();
+			}catch(Exception e) {
+				System.out.println("Exception:Enter value in double only");
+				
+			}
 			return num;
 		}
 		/**accept string from user
 		 * @return String
 		 */
 		public static String inputString() {
-			String str=sc.next();
+			String str=new String();
+			try {
+			str=sc.next();
+			}catch(Exception e) {
+				System.out.println("Exception:Enter String only");
+			}
 			return str;
 		}
 		
 		public static char inputChar() {
-			char ch=sc.next().charAt(0);
+			char ch = ' ';
+			try {
+				ch=sc.next().charAt(0);
+			}catch(Exception e) {
+				System.out.println("Exception:Enter Character");
+			}
 			return ch;
 		}
 		
@@ -188,7 +211,7 @@ public class Utility {
 			System.out.println("Enter "+n*m+" Elements");
 			for(int i=0;i<n;i++) {
 				for(int j=0;j<m;j++) {
-					arr[i][j]=sc.nextInt();
+					arr[i][j]=Utility.inputNumber();
 				}
 			}
 			System.out.println("Array is..");
@@ -210,7 +233,7 @@ public class Utility {
 			System.out.println("Enter "+n*m+" Elements");
 			for(int i=0;i<n;i++) {
 				for(int j=0;j<m;j++) {
-					arr[i][j]=sc.nextDouble();
+					arr[i][j]=Utility.inputDouble();
 				}
 			}
 			System.out.println("Array is..");

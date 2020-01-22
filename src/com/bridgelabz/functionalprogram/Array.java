@@ -1,4 +1,6 @@
 package com.bridgelabz.functionalprogram;
+import java.util.InputMismatchException;
+
 import com.bridgelabz.utility.Utility;
 /**
  *	Created By:Ankit Rajput 
@@ -14,20 +16,33 @@ public class Array {
 		// TODO Auto-generated method stub
 		System.out.println("Select Array of..\n1.Integers\n2.Doubles\n3.Boolean");
 		int n=Utility.inputNumber();
-		System.out.println("Enter No of Rows And Columns");
-		int row=Utility.inputNumber();
-		int column=Utility.inputNumber();
+		int row,column;
 		switch(n) {
 		case 1:
+			System.out.println("Enter No of Rows And Columns");
+			row=Utility.inputNumber();
+			column=Utility.inputNumber();
 			Utility.printWriter(row,column);
 			break;
 		case 2:
+			System.out.println("Enter No of Rows And Columns");
+			row=Utility.inputNumber();
+			column=Utility.inputNumber();
 			Utility.printWriterDouble(row,column);
 			break;
 		case 3:
+			System.out.println("Enter No of Rows And Columns");
+			try {
+			row=Utility.inputNumber();
+			column=Utility.inputNumber();
 			Utility.printWriterBoolean(row, column);
 			break;
+			}catch(InputMismatchException e) {
+				System.out.println("You entered incorrect data");
+				break;
+			}
 		default:
+			System.out.println("Please Select 1 or 2 or 3 Only");
 			break;
 		}
 	}

@@ -13,8 +13,8 @@ public class WindChill {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Enter Temperature And Wind Speed");
-		double t=Utility.inputDouble();		//t temperature(Fahrenheit)
-		double v=Utility.inputDouble();		//v wind speed
+		double t=Utility.inputDouble();		//t temperature(Fahrenheit) t < 50
+		double v=Utility.inputDouble();		//v wind speed		3 < v < 120
 		System.out.println("Wind Chill "+Utility.windChill(t, v)+" F");
 	}
 }
