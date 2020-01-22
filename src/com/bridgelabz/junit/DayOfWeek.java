@@ -15,13 +15,17 @@ public class DayOfWeek {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Enter Month");
+		System.out.println("Enter Month(in number)");
 		int m=Utility.inputNumber();
+		if(0 < m && m <= 12) {
 		System.out.println("Enter Date");
 		int d=Utility.inputNumber();
 		System.out.println("Enter Year");
 		int y=Utility.inputNumber();
 		Utility.dayOfWeek(y, m, d);
-		
+		}
+		else {
+			System.out.println("enter from 1 to 12 only");
+		}
 	}
 }

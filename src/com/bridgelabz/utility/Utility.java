@@ -21,7 +21,7 @@ public class Utility {
 			try {
 			num=sc.nextInt();
 			}catch(Exception e) {
-				System.out.println("Exception:Please Enter the Number");
+				System.out.println("Exception:Please Enter the Integer");
 			}
 			return num;
 		}
@@ -608,7 +608,7 @@ public class Utility {
 		 * @param key data type is String which is entered by the user to search in the array
 		 * @return 0 or -1 if element present 0 will be return else -1 will be return
 		 */
-		public static int binarySearch(String arr[],String key) {
+		public static int binarySearch(String[] arr,String key) {
 		int low=0;
 		int high=arr.length-1;
 			while (low <= high) {

@@ -133,7 +133,7 @@ public class TicTacToe {
 						gameBoard[2][4]=symbol;
 					break;
 				case 7:
-					if(gameBoard[4][0]=='X'||gameBoard[5][1]=='O'){
+					if(gameBoard[4][0]=='X'||gameBoard[4][1]=='O'){
 						return;
 					}
 					else
