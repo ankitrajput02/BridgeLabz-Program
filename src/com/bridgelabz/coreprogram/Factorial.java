@@ -13,6 +13,7 @@ public class Factorial {
 		// TODO Auto-generated method stub
 		System.out.println("Enter Number to Find Factorial");
 		int num=Utility.inputNumber();
-		Utility.factorOf(num);
+		int fact=Utility.factorOf(num);
+	System.out.println(fact);
 	}
 }

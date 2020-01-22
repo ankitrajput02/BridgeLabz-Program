@@ -1,10 +1,12 @@
 package com.bridgelabz.utility;
 import java.util.Arrays;
 import java.util.Scanner;
-
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.File;
 
 /**
- * @author admin1
+ * 
  *
  */
 public class Utility {
@@ -57,6 +59,27 @@ public class Utility {
 		}
 		
 		/*Title: Flip Coin Percentage Using Math.random Function*/
+		public static int flipCoin(int flip) {
+		int tail=0,head=0;
+		if(flip>0) {
+			int counter=0;
+			while(counter < flip) { //counter use to repeat while loop upto no of times Flip
+				if(Math.random() < 0.5) {  //Math.random() returns value of double data type
+					tail++;
+				}
+				else {
+					head++;
+				}
+			counter++;				
+			}
+			System.out.println("No of Heads"+head);
+			System.out.println("No of Tails"+tail);
+			System.out.println("Head Percentage "+Utility.headPercentage(head, flip)); //no of heads And Flip
+			System.out.println("Tail Percentage "+Utility.tailPercentage(tail, flip)); //no of tails And Flip
+		}
+		return head;
+		
+		}
 		//For Tail Percentage
 		/**
 		 * @param tail integer number
@@ -85,15 +108,15 @@ public class Utility {
 		public static boolean leapOrNot(int year) {
 			if(year>=1000||year<9999){
 				if(year % 400==0 || year % 4 ==0 && year % 100 != 0) { //year % 400 & 4==0 is leap.But year % 100==0 is not Leap year
-					System.out.println("Leap Year");
+					//System.out.println("Leap Year");
 					return true;
 				}
 				else{
-					System.out.println("Not Leap Year");
+					//System.out.println("Not Leap Year");
 					return false;
 				}
 			}
-			System.out.println("Not Leap Year");
+			//System.out.println("Not Leap Year");
 			return false;
 			
 		}
@@ -101,21 +124,19 @@ public class Utility {
 		/*Title:Program To find Power of 2 of N*/
 		/**
 		 * @param num integer number from command line
-		 * @return power of 2
 		 */
-		public static int powerOfTwo(int num) {
+		public static void powerOfTwo(int num) {
 			if(num>=0 && num <31 ) {
 				int i=1;
 				int result=1;
 				while(i<=num) 
 				{
 				result=result*2;	
-				System.out.print(result+" ");
+				//System.out.print(result+" ");
 				i++;
 				}
 				System.out.println("2^"+num+"="+result);
 			}
-			return num;
 		}
 		
 		/*Title: Program To print harmonic value of a number*/
@@ -129,7 +150,7 @@ public class Utility {
 				for(int i=1;i<num;i++) {
 					 result=result+(double)1/i;	//1/1 + 1/2 + ... + 1/num
 				}
-			System.out.println("Harmonic Value Of "+result);
+			//System.out.println("Harmonic Value Of "+result);
 			}
 			return result;
 			
@@ -145,9 +166,9 @@ public class Utility {
 			int fact=1;					//initialise fact=1
 			for(int i=num;i>=1;i--) {	//run for from num to 1
 				fact=fact*i;			//multiply num with decreament i
-				System.out.print(i+" ");
+				
 			}
-			System.out.println("\nFacforial of "+num+" is "+fact);
+			//System.out.println("\nFacforial of "+num+" is "+fact);
 			return fact;
 		}
 		
@@ -323,7 +344,7 @@ public class Utility {
 		 * @param num integer number that shows how many random numbers are required
 		 * @return distinct elements/number and Total random no required to generate distinct numbers
 		 */
-		public static int couponNumber(int num) {
+		public static void couponNumber(int num) {
 			int count=0,distinct=0;
 			boolean newNum[]=new boolean[num];
 			while(distinct<num) 
@@ -338,7 +359,7 @@ public class Utility {
 			
 			}
 			System.out.println("\nTotal random number required "+count);
-			return distinct;
+			
 			}
 		
 		//Title:Stopwatch Program for measuring the time that elapses between the start and end clicks
@@ -372,6 +393,19 @@ public class Utility {
 			return amount;
 		}
 		
+		//Newtons Sqrt
+		
+		/**
+		 * @param num double data type value
+		 * @param epsilon
+		 */
+		public static void sqrt(double num, double epsilon) {
+			double t = num;
+			while (Math.abs(t - num / t) > epsilon * t) {
+				t = (num / t + t) / 2.0;
+			}
+			System.out.println("Square Root "+t);
+		}
 		//Tremperature Connversion
 		/**Purpose:The temperature in fahrenheit as input outputs the temperature in Celsius or viceversa 
 		 * using the formula Celsius to Fahrenheit:   (°C × 9/5) + 32 = °F
@@ -577,13 +611,13 @@ public class Utility {
 		public static void insertionSort(int arr[]) {
 		int size=arr.length;
 		for(int i=1;i<size;i++) {
-			int key=arr[i];
+			int temp=arr[i];
 			int j=i-1;
-			while(j>=0 && arr[j] > key) {
+			while(j>=0 && arr[j] > temp) {
 				arr[j+1]=arr[j];
 				j=j-1;
 			}
-			arr[j+1]=key;
+			arr[j+1]=temp;
 		}
 		for(int i=0;i<size;i++) {
 		System.out.print(arr[i]+" ");
@@ -719,5 +753,32 @@ public class Utility {
 		    	if (num == temp)
 		   	        System.out.println(num);
 		   	}
+		   	
+		   	//Title: guessing the user's number
+
+			/**
+			 * @param arr array of integer
+			 * @param low
+			 * @param high
+			 * @return
+			 */
+			public static int binarySearchInt(int arr[], int low, int high) {
+				if (high >= low) {
+					int mid = low + (high - low) / 2; // finding mid
+					System.out.println(arr[mid] + " is the number :");
+					System.out.println("if greater press g else l"); // asking user for correct answer
+					String key = inputString();
+					if (key.equals("y"))
+						return mid;
+					else if (key.equals("g"))
+						return binarySearchInt(arr, mid + 1, high); // recursively calling binarySearchInt method
+					else if (key.equals("l"))
+						return binarySearchInt(arr, low, mid - 1);
+					else
+						return binarySearchInt(arr, low, high);
+				}
+				return -1;
+			}
+
 			
 }

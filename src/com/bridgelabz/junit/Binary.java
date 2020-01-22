@@ -19,6 +19,7 @@ public class Binary {
 		// TODO Auto-generated method stub
 		System.out.println("Enter decimal number");
 		int decimal=Utility.inputNumber();
+		Utility.toBinary(decimal);
 		
 	}
 

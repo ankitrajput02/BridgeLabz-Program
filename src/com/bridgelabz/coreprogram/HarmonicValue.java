@@ -12,6 +12,6 @@ public class HarmonicValue {
 		// TODO Auto-generated method stub
 		System.out.println("Enter Number to find Harmonic Value..");
 		int num=Utility.inputNumber();
-		Utility.harmonicValueOf(num);
+		System.out.println("Harmonic Value "+Utility.harmonicValueOf(num));
 	}
 }

@@ -12,6 +12,12 @@ public class LeapYear {
 		// TODO Auto-generated method stub
 		System.out.println("Enter Year to Check ");
 		int year=Utility.inputNumber();
-		Utility.leapOrNot(year);
+		boolean result=Utility.leapOrNot(year);
+		if(result==true) {
+			System.out.println("Year is Leap");
+		}
+		else {
+			System.out.println("Year is Not Leap");
+		}
 	}
 }
