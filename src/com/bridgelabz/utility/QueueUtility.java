@@ -36,7 +36,7 @@ public class QueueUtility {
 	}
 	//Add data to Queue
 	public static void enQueue(int data) {
-		if(isFull()==true) {
+		if(isFull()) {
 			System.out.println("Queue is Full");
 		}
 		else {

@@ -20,7 +20,7 @@ public class BalenceParentheses {
 			System.out.print(arr[i]+" ");
 		}
 //		char arr[]= {'{','(',')','}'};
-		if(Utility.isBalence(arr))
+		if(Utility.isBalance(arr))
 			System.out.println("Balence");
 		else
 			System.out.println("Not Balence");	
