@@ -989,9 +989,138 @@ public class Utility {
 			node = node.next;
 		}
 		System.out.println();
-		
+	}
+	
+	//Program to Check Balance Parenthesis
+	static Node3 top;
+	static class Node3<E> 
+    { 
+        E data; 
+        Node3 next; 
+        public Node3(E data) 
+        { 
+            this.data = data; 
+            next = null; 
+        } 
+    }
+	public static <E> void push(E data) {
+		//@SuppressWarnings("unchecked")
+		Node3 n = new Node3(data);
+		if(top==null) {
+			top=n;
+		}
+		else {
+			Node3 temp=top;
+			while(temp.next!=null) {
+				temp=temp.next;
+				
+			}
+			temp.next=n;
+			
+		}
 		
 		
 	}
+	public static <E> E pop() {
+		Node3 temp=top;
+		Node3 prev=temp;
+		E data=null;
+		if(isEmpty()) {
+			System.out.println("Stack is Empty");
+		}
+		else {
+			while(temp.next!=null) {
+				prev=temp;
+				temp=temp.next;
+			}
+			if(prev==temp) {
+				top=null;
+			}
+			data=(E) temp.data;
+			prev.next=null;
+		}
+		return data;
+	}
+	public static boolean isEmpty() {
+		if(top==null) {
+			return true;
+		}
+		return false;
+	}
+	//To check Characters are match or Not
+	public static boolean isMatching(char c1,char c2) {
+		if(c1 == '(' && c2 == ')') {
+			return true;
+		}
+		if(c1 == '{' &&c2 == '}') {
+			return true;
+		}
+		if(c1 == '[' &&c2 == ']') {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	//To check array is Balance or not
+	public static boolean isBalance(char exp[])  {
+		for(int i=0;i<exp.length;i++) {
+			if( exp[i] == '{' || exp[i] == '[' || exp[i] == '(' ) 
+				Utility.push(exp[i]);
+				if( exp[i] == '}' || exp[i] == ']' || exp[i] == ')' ) {
+					if(Utility.isEmpty()) {
+						return false;
+					}
+					else if(!isMatching(pop(),exp[i])) {
+						return false;
+					}
+				}
+		}
+		if(Utility.isEmpty()) {
+			return true;
+		}
+		else {
+			return false;
+		}
+		}
+	//Bank Operation
+	public static int transactions(int bankBalance) {
+		System.out.println("1.Deposit Money\n2.Withdraw Money\nSelect Choice");
+		int ch=Utility.inputNumber();
+		bankBalance=choice(ch,bankBalance);
+		return bankBalance;
+	}
+	public static int choice(int ch,int bankBalance) {
+		switch(ch) {
+		case 1:
+			System.out.println("Enter Money to Deposit");
+			int deposit=Utility.inputNumber();
+			bankBalance=transaction(ch,deposit,bankBalance);
+			QueueUtility.deQueue();
+			System.out.println("Bank Balance "+bankBalance);
+			
+			break;
+		case 2:
+			System.out.println("Enter Money to Withdraw");
+			int withdraw=Utility.inputNumber();
+			bankBalance=transaction(ch,withdraw,bankBalance);
+			QueueUtility.deQueue();
+			System.out.println("Bank Balance "+bankBalance);
+			
+			break;
+		}
+		return bankBalance;
+		
+	}
+	public static int transaction(int ch,int money,int bankBalance) {
+		if(ch==1) {
+			bankBalance=bankBalance+money;
+		}
+		else {
+			bankBalance=bankBalance-money;
+		}
+		return bankBalance;
+	}
+
 
 }
