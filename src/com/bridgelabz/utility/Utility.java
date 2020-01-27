@@ -1,6 +1,7 @@
 package com.bridgelabz.utility;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -9,8 +10,10 @@ import com.bridgelabz.datastructure.currentNode;
 import com.bridgelabz.datastructure.UnOrderedList.Node;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 /**
@@ -974,7 +977,7 @@ public class Utility {
 		}
 		else {
 			Node last = head;
-			while(last.next != null) {	//***
+			while(last.next != null) {	
 				last = last.next;
 			}
 			last.next = newNode;
@@ -1120,6 +1123,35 @@ public class Utility {
 			bankBalance=bankBalance-money;
 		}
 		return bankBalance;
+	}
+	
+	//
+	public static void writetoFile(String list1) throws FileNotFoundException{
+		PrintWriter pw=new PrintWriter(new File("/home/admin1/workspace-pro/Program/Output.txt"));
+		pw.print(list1);
+		pw.print(" ");
+		pw.flush();
+	}
+	//
+	public static int[] linkedListToArrayConversion(LinkedList<Integer> ll) {
+		// TODO Auto-generated method stub
+		int n=ll.size();
+		int[] arr=new int[n];
+		int a=0;
+		for (int i = 0; i < ll.size(); i++) {
+			arr[i]=ll.get(a);
+			a++;
+		}
+		return arr;
+	}
+
+	//
+	public static LinkedList<Integer> arrayToLinkedListConversion(int[] arr){
+		LinkedList<Integer> ll = new LinkedList<Integer>();
+		for (int i = 0; i < arr.length; i++) {
+			ll.add(arr[i]);
+		}
+		return ll;
 	}
 
 
