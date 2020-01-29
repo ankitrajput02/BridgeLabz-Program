@@ -923,8 +923,8 @@ public class Utility {
 	public static void findAddOrDelete(String find) {
 		Node currentNode = head;
 		int temp = 0;
-		if (currentNode != null && (currentNode.data).equals(find)) {
-			head = currentNode.next; // Changed head
+		if (currentNode != null && (currentNode.data).equals(find)) {	
+			head = currentNode.next; // Changed head delete first
 			System.out.println("Word is Found And Delete");//
 			printLinkedList();
 			return;
@@ -1405,5 +1405,21 @@ public class Utility {
 			System.out.print(arr[i]+"\t");
 		}
 		System.out.println();
+	}
+	//Factorial of double
+	static double fact(int n) {
+	double res=1.0;
+	for (int i = 1; i <=n ; i++) {
+		res=res*i;
+	}
+	return res;
+	}
+	//Count Possible Binary Search Trees
+	public static double countBST(int nodes) {
+		double result;
+		//Claculate no of possible Binary Trees
+		result=Utility.fact(2*nodes)/(Utility.fact(nodes+1)*Utility.fact(nodes));
+		return result;
+		//System.out.println("Number of Binary Search Trees "+possibleBST);
 	}
 }

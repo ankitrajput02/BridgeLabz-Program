@@ -18,6 +18,7 @@ public class LinkedListUtility<E> {
             next = null; 
         } 
     }
+	//insert data at last
 	public static <E> void insert(E data) {
 		//@SuppressWarnings("unchecked")
 		Node<E> node = new Node<E>(data);
@@ -38,6 +39,7 @@ public class LinkedListUtility<E> {
 		
 		
 	}
+	//insert data at index location
 	public static <E> void insertAt(int index,E data) {//
 		Node<E> node=new Node<E>(data);
 		node.data=data;
@@ -55,7 +57,7 @@ public class LinkedListUtility<E> {
 		n.next=node;
 		}
 	}
-	//
+	//delete by using data
 	public static<E> void delete(E str) {//
 		Node<E> n=head;
 		Node<E> prev=head;
@@ -78,7 +80,7 @@ public class LinkedListUtility<E> {
 			}
 		}
 	}
-	
+	//Delete element from specific index
 	public static<E> void deleteAt(int index) {
 		Node<E> n=head;
 		if(index==0) {
@@ -91,6 +93,7 @@ public class LinkedListUtility<E> {
 			n.next=n.next.next;
 		}
 	}
+	//delete last node
 	public static <E> void deleteLast() {//
 		Node<E> n=head;
 		while(n.next!=null) {
@@ -101,7 +104,7 @@ public class LinkedListUtility<E> {
 	
 	
 	
-	
+	//code to add data at start
 	public static <E> void insertAtStart(E data) {
 		// TODO Auto-generated method stub
 		Node<E> node=new Node<E>(data);
@@ -133,6 +136,7 @@ public class LinkedListUtility<E> {
 		}
 		System.out.println();
 	}
+	//to arrange data into natural ordering
 	public static<E extends Comparable<E>>boolean search(E data) {//
 		// TODO Auto-generated method stub
 		Node<E> n = head;
