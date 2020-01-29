@@ -10,8 +10,8 @@ public class PrimeNumberRange {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Utility.primeRange(2,1000);
 		
+		Utility.primeRange(1,1000);
 	}
 
 }

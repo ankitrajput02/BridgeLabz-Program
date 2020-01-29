@@ -6,13 +6,18 @@ import java.util.LinkedList;
 import com.bridgelabz.utility.LinkedListUtility;
 import com.bridgelabz.utility.Utility;
 
+/**Title:Hashing Function to search a Number in a slot
+ * Created By:Ankit Rajput
+ *
+ */
 public class HashingFunction {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		LinkedList<Integer> ll=new LinkedList<Integer>();
-		ll.addAll(Utility.readFileInteger("/home/admin1/workspace-pro/Program/numberdata.txt"));
-		int arr []=Utility.linkedListToArrayConversion(ll);
+		//addAll():Appends all of the elements in the specified collection to the end of the list
+		ll.addAll(Utility.readFileInteger("/home/admin1/workspace-pro/Program/number.txt"));
+		int arr []=Utility.linkedListToArrayConversion(ll); //LinkedList to Array Conversion
 		Object [] obj=new Object[11];
 		for (int i = 0; i < 11; i++) {
 			obj[i]=new LinkedListUtility<Integer>();
@@ -26,7 +31,7 @@ public class HashingFunction {
 		}
 		for (int i = 0; i < obj.length; i++) {
 			LinkedListUtility<Integer> list = (LinkedListUtility)obj[i];
-			System.out.println("Stack "+i+"->");
+			System.out.println("Stack "+i);
 			list.show();
 			System.out.println();
 		}

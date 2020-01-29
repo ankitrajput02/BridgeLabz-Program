@@ -14,13 +14,13 @@ public class BalenceParentheses {
 		System.out.println("Enter Expression");
 		String str=Utility.inputString();
 //		String str="(5+6)∗(7+8)/(4+3)";
-		char arr[]=str.toCharArray();
+		char arr[]=str.toCharArray();		//convert String to Array
 		//Print
 		for(int i=0;i<arr.length;i++) {
 			System.out.print(arr[i]+" ");
 		}
 //		char arr[]= {'{','(',')','}'};
-		if(Utility.isBalance(arr))
+		if(Utility.isBalance(arr))		//check expression balence or Not
 			System.out.println("Balence");
 		else
 			System.out.println("Not Balence");	

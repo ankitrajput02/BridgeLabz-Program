@@ -34,10 +34,10 @@ public class QueueUtility {
 		}
 		return false;
 	}
-	//Add data to Queue
+	//Add data to Queue from Last
 	public static void enQueue(int data) {
 		if(isFull()) {
-			System.out.println("Queue is Full");
+			//System.out.println("Queue is Full");
 		}
 		else {
 			rear++;
@@ -51,10 +51,10 @@ public class QueueUtility {
 		}
 		
 	}
-	
+	//Remove data from Queue from front
 	public static void deQueue() {
 		if(isEmpty()) {
-			System.out.println("Queue is Empty");
+			//System.out.println("Queue is Empty");
 		}
 		else {
 			front++;
@@ -72,7 +72,7 @@ public class QueueUtility {
 	
 	
 	
-	
+	//Print Queue data
 	public static void show(){
 		System.out.print("elements: ");
 		for(int i=0;i<size;i++) {

@@ -1,14 +1,15 @@
 package com.bridgelabz.datastructure;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
 
 import com.bridgelabz.utility.Utility;
 
+/**Title:Read the Text from a file, split it into words and arrange it as Linked List.Take a user input to 
+ * search a Word in the List. If the Word is not found then add it to the list, and if it found then remove
+ * the word from the List.
+ * Created By:Ankit Rajput
+ */
 public class UnOrderedList {
 
 	public static void main(String[] args) throws IOException {

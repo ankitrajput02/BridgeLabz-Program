@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.Stack;
 
 import com.bridgelabz.datastructure.currentNode;
 import com.bridgelabz.datastructure.UnOrderedList.Node;
@@ -147,7 +148,7 @@ public class Utility {
 	public static boolean leapOrNot(int year) {
 		if (year >= 1000 || year < 9999) {
 			if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) { // year % 400 & 4==0 is leap.But year % 100==0 is
-																		// not Leap year
+				// not Leap year
 				// System.out.println("Leap Year");
 				return true;
 			} else {
@@ -506,6 +507,7 @@ public class Utility {
 	 * @param m integer for input month
 	 * @param d integer for date
 	 */
+	/*
 	public static void dayOfWeek(int y, int m, int d) {
 		int y0 = y - (14 - m) / 12;
 		int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
@@ -535,6 +537,16 @@ public class Utility {
 			break;
 
 		}
+	}*/
+	//Day of Week
+	public static int dayOfWeek(int y, int m, int d) {
+		int day, month, year;
+		year = y - (14 - m) / 12;
+		int x = year + year / 4 - year / 100 + year / 400;
+		month = m + 12 * ((14 - m) / 12) - 2;
+		day = (d + x + 31 * month / 12) % 7;
+		return day;
+
 	}
 
 	/*
@@ -587,9 +599,11 @@ public class Utility {
 	/**
 	 * @param start integer number
 	 * @param end   integer number
+	 *
 	 */
 	public static void primeRange(int start, int end) {
-		for (int i = start; i < end; i++) {
+		int i;
+		for (i = start; i <= end; i++) {
 			int flag = 0;
 			for (int j = 2; j < i; j++) {
 				if (i % j == 0) {
@@ -597,9 +611,13 @@ public class Utility {
 				}
 			}
 			if (flag == 0) {
-				System.out.println(i);
+				System.out.print(i+" ");
+
 			}
+
 		}
+
+
 	}
 
 	// Title:Program for Bubble Sort
@@ -616,7 +634,7 @@ public class Utility {
 				}
 			}
 		}
-		
+
 	}
 
 	// Title: Binary Search of String
@@ -837,11 +855,14 @@ public class Utility {
 		// TODO Auto-generated method stub
 		LinkedList<Integer> ll = new LinkedList<Integer>(); //
 		int num=0;
+		//File: Creates a new File instance by converting the given pathname string into an abstract pathname.
 		File file = new File(path);
+		//BufferedReader:Reads text from a character-input stream
+		//FileReader:Creates a new FileReader, given the File to read
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String[] numbers = br.readLine().split(" "); // read and Split String and Store into array of String
-		for (int i = 0; i < numbers.length; i++) { //
-			num=Integer.parseInt(numbers[i]);
+		for (int i = 0; i < numbers.length; i++) { 
+			num=Integer.parseInt(numbers[i]);	//Parses the string argument as a signed decimal integer
 			ll.add(num); // Read Array of String upto lengths And append to Linked List
 		}
 		br.close();
@@ -993,19 +1014,19 @@ public class Utility {
 		}
 		System.out.println();
 	}
-	
+
 	//Program to Check Balance Parenthesis
 	static Node3 top;
 	static class Node3<E> 
-    { 
-        E data; 
-        Node3 next; 
-        public Node3(E data) 
-        { 
-            this.data = data; 
-            next = null; 
-        } 
-    }
+	{ 
+		E data; 
+		Node3 next; 
+		public Node3(E data) 
+		{ 
+			this.data = data; 
+			next = null; 
+		} 
+	}
 	public static <E> void push(E data) {
 		//@SuppressWarnings("unchecked")
 		Node3 n = new Node3(data);
@@ -1016,13 +1037,13 @@ public class Utility {
 			Node3 temp=top;
 			while(temp.next!=null) {
 				temp=temp.next;
-				
+
 			}
 			temp.next=n;
-			
+
 		}
-		
-		
+
+
 	}
 	public static <E> E pop() {
 		Node3 temp=top;
@@ -1066,18 +1087,22 @@ public class Utility {
 		}
 	}
 	//To check array is Balance or not
+	/**
+	 * @param exp array
+	 * @return true or false
+	 */
 	public static boolean isBalance(char exp[])  {
 		for(int i=0;i<exp.length;i++) {
 			if( exp[i] == '{' || exp[i] == '[' || exp[i] == '(' ) 
 				Utility.push(exp[i]);
-				if( exp[i] == '}' || exp[i] == ']' || exp[i] == ')' ) {
-					if(Utility.isEmpty()) {
-						return false;
-					}
-					else if(!isMatching(pop(),exp[i])) {
-						return false;
-					}
+			if( exp[i] == '}' || exp[i] == ']' || exp[i] == ')' ) {
+				if(Utility.isEmpty()) {
+					return false;
 				}
+				else if(!isMatching(pop(),exp[i])) {	//if not match with pop() and exp[i](char at i)
+					return false;
+				}
+			}
 		}
 		if(Utility.isEmpty()) {
 			return true;
@@ -1085,7 +1110,7 @@ public class Utility {
 		else {
 			return false;
 		}
-		}
+	}
 	//Bank Operation
 	public static int transactions(int bankBalance) {
 		System.out.println("1.Deposit Money\n2.Withdraw Money\nSelect Choice");
@@ -1101,7 +1126,7 @@ public class Utility {
 			bankBalance=transaction(ch,deposit,bankBalance);
 			QueueUtility.deQueue();
 			System.out.println("Bank Balance "+bankBalance);
-			
+
 			break;
 		case 2:
 			System.out.println("Enter Money to Withdraw");
@@ -1109,11 +1134,11 @@ public class Utility {
 			bankBalance=transaction(ch,withdraw,bankBalance);
 			QueueUtility.deQueue();
 			System.out.println("Bank Balance "+bankBalance);
-			
+
 			break;
 		}
 		return bankBalance;
-		
+
 	}
 	public static int transaction(int ch,int money,int bankBalance) {
 		if(ch==1) {
@@ -1124,15 +1149,15 @@ public class Utility {
 		}
 		return bankBalance;
 	}
-	
-	//
+
+	//Code to write data to the File
 	public static void writetoFile(String list1) throws FileNotFoundException{
 		PrintWriter pw=new PrintWriter(new File("/home/admin1/workspace-pro/Program/Output.txt"));
 		pw.print(list1);
 		pw.print(" ");
 		pw.flush();
 	}
-	//
+	//Code to Convert LinkedList to Array
 	public static int[] linkedListToArrayConversion(LinkedList<Integer> ll) {
 		// TODO Auto-generated method stub
 		int n=ll.size();
@@ -1144,8 +1169,8 @@ public class Utility {
 		}
 		return arr;
 	}
-
-	//
+	
+	//Code to Convert array to Linked List
 	public static LinkedList<Integer> arrayToLinkedListConversion(int[] arr){
 		LinkedList<Integer> ll = new LinkedList<Integer>();
 		for (int i = 0; i < arr.length; i++) {
@@ -1153,6 +1178,232 @@ public class Utility {
 		}
 		return ll;
 	}
+	//Calender Program
+	/**
+	 * @param month input integer
+	 * @param year input integer
+	 * @return calender
+	 */
+	public static String[][] createCalendar(int month, int year) {
+		String calendar[][] = new String[7][7];		//Create 2D Array 7 Rows & Columns
+		int day = Utility.dayOfWeek(year, month, 1);	//take input Starting date of Month and year and calculate Day
+		String dayOfWeek[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+		int daysOfMonth[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+		int days = daysOfMonth[month - 1];
+		int k = 1, flag = 0;
+		for (int i = 0; i < 6; i++) {		//loop for rows
+			for (int j = 0; j < 7; j++) {	//loop for Columns i.e 7 Days of week
+				if (k <= days) {
+					if (i == 0) {
+						calendar[i][j] = dayOfWeek[j]; //store week days in Array
+					} else if (day == j) {
+						calendar[i][j] = String.valueOf(k); //convert int to String & store into array
+						day++;
+						k++;
+						flag = 1;
+					} else {
+						calendar[i][j] = "";
+					}
+				} else {
+					calendar[i][j] = "";
+				}
+			}
+			if (flag == 1) {
+				day = 0;
+			}
+		}
+		return calendar;
+	}
+	//	// Program to find Prime numbers from range And store in 2D Array
+	//		/**
+	//		 * @param start integer number
+	//		 * @param end   integer number
+	//		 * @return 
+	//		 *
+	//		 */
+	//		public static int[][] primeRangeToArray(int start, int end) {
+	//			int i;
+	//			for (i = start; i <= end; i++) {//number
+	//				int flag = 0;
+	//				for (int j = 2; j < i; j++) {
+	//					if (i % j == 0) {
+	//						flag = 1;
+	//					}
+	//				}
+	//				if (flag == 0) {
+	//					
+	//					
+	//				}
+	//			
+	//			}
+	//			
+	//			
+	//			
+	//		}
+	//Program to check number is Prime or Not using boolean
+	public static boolean isPrime(int num) {
+		int flag=0;
+		for(int j=2;j<=num/2;j++) {
+			if(num % j==0) {
+				flag = 1;
+				break;
+			}
+		}
+		if(flag==0) {
+			return true;
+		}
+		return false;
+	}
 
+	//
+	/**
+	 * @param start integer
+	 * @param end integer
+	 * @return two dimensional array of prime numbers
+	 */
+	public static int[][] primeRangeToArray(int start,int end)
 
+	{
+		int prime[][] = new int[10][26];
+
+		int r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0;
+		for(int i=start; i<=end; i++)
+		{
+			boolean pr=isPrime(i);
+			if(pr==true)
+			{
+				if(i > 0 && i < 100)
+				{
+
+					prime[0][r1]=i;
+					r1++;
+				}
+				else if(i > 99 && i < 200)
+				{
+					prime[1][r2]=i;
+					r2++;
+				}
+				else if(i > 199 && i < 300)
+				{
+					prime[2][r3]=i;
+					r3++;
+				}
+				else if(i > 299 && i < 400)
+				{
+					prime[3][r4]=i;
+					r4++;
+				}
+				else if(i > 399 && i < 500)
+				{
+					prime[4][r5]=i;
+					r5++;
+				}
+				else if(i > 499 && i < 600)
+				{
+					prime[5][r6]=i;
+					r6++;
+				}
+				else if(i > 599 && i < 700)
+				{
+					prime[6][r7]=i;
+					r7++;
+				}
+				else if(i > 699 && i < 800)
+				{
+					prime[7][r8]=i;
+					r8++;
+				}
+				else if(i > 799 && i < 900)
+				{
+					prime[8][r9]=i;
+					r9++;
+				}
+				else
+				{
+					prime[9][r10]=i;
+					r10++;
+				}
+			}
+
+		}
+		return prime;
+	}
+	//Prime Anagram
+	public static void primeAnagram(int start,int end)
+	{
+		int prime[]=new int[500];
+		int primeAnagram[][]=new int[20][2];
+		int j=0;
+		for (int i = start; i < end; i++) {
+			if(isPrime(i)) {
+				prime[j]=i;	
+				j++;
+			}
+		}
+		System.out.println("Final Prime Numbers");
+		int count=0;
+		for (int i = 0; i < j; i++) {
+			if(count%15==0) {
+				System.out.println();
+			}
+			System.out.print(prime[i]+"\t");
+			count++;
+		}
+		System.out.println("\nPrime Anagrams");
+		int k2=0;
+		for (int i = 0; i < j; i++) {
+			for (int k = i+1; k < j; k++) {
+				if(isAnagram(prime[i],prime[k])) {
+					primeAnagram[k2][0]=prime[i];
+					primeAnagram[k2][1]=prime[k];
+					k2++;
+				}
+			}
+		}
+		for (int i = 0; i < k2; i++) {
+			for (int k = 0; k < 2; k++) {
+				System.out.print(primeAnagram[i][k]+"\t");	
+			}
+			System.out.println();
+		}
+		
+		
+	}
+	//Program to check two no are Anagram
+	public static boolean isAnagram(int num1,int num2) {	//17,71
+		int rem,sum=0;
+		while(num1>0) {
+			rem=num1%10;	
+			sum=(sum*10)+rem;
+			num1=num1/10;
+		}
+		if(sum==num2) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	//Program to check no is prime and store into stack
+	static Stack<Integer> st= new Stack<Integer>();
+	public static void anagramStack(int s, int e) {
+		// TODO Auto-generated method stub
+		int arr[]=new int[e];
+		int count=0;
+		for(int i=s;i<e;i++) {
+			if(isPrime(i)) {
+				arr[count]=i;
+				count++;
+			}
+		}
+		System.out.println("Prime Numbers Are");
+		for (int i = 0; i < count; i++) {
+			if(i%15==0) {
+				System.out.println();
+			}
+			System.out.print(arr[i]+"\t");
+		}
+		System.out.println();
+	}
 }
