@@ -18,13 +18,13 @@ public class Palindrom {
 		for (int i = s-1; i >=0 ; i--) {
 			QueueLinkedListUtility.enqueue(str.charAt(i));	//add String of characters into Queue Linked List
 		}
-		QueueLinkedListUtility.displayQueue();
+		QueueLinkedListUtility.printQueue();
 		System.out.println();
 	char ch1,ch2;
 	int flag=0;
 	for(int i=0;i<mid;i++) {
-		ch1 = QueueLinkedListUtility.removeFront(); //Dequeue or Remove character from front of Queue
-		ch2 = QueueLinkedListUtility.removeRear();	//Dequeue or Remove character from rear of Queue
+		ch1 = QueueLinkedListUtility.dequeueFront(); //Dequeue or Remove character from front of Queue
+		ch2 = QueueLinkedListUtility.dequeueRear();	//Dequeue or Remove character from rear of Queue
 		if(ch1!=ch2) {			//check two characters are Equal or not
 			flag=1;
 		}

@@ -1,5 +1,6 @@
 package com.bridgelabz.utility;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.InputMismatchException;
@@ -1169,7 +1170,7 @@ public class Utility {
 		}
 		return arr;
 	}
-	
+
 	//Code to Convert array to Linked List
 	public static LinkedList<Integer> arrayToLinkedListConversion(int[] arr){
 		LinkedList<Integer> ll = new LinkedList<Integer>();
@@ -1366,8 +1367,8 @@ public class Utility {
 			}
 			System.out.println();
 		}
-		
-		
+
+
 	}
 	//Program to check two no are Anagram
 	public static boolean isAnagram(int num1,int num2) {	//17,71
@@ -1384,7 +1385,7 @@ public class Utility {
 			return false;
 		}
 	}
-	
+
 	//Program to check no is prime and store into stack
 	static Stack<Integer> st= new Stack<Integer>();
 	public static void anagramStack(int s, int e) {
@@ -1408,11 +1409,11 @@ public class Utility {
 	}
 	//Factorial of double
 	static double fact(int n) {
-	double res=1.0;
-	for (int i = 1; i <=n ; i++) {
-		res=res*i;
-	}
-	return res;
+		double res=1.0;
+		for (int i = 1; i <=n ; i++) {
+			res=res*i;
+		}
+		return res;
 	}
 	//Count Possible Binary Search Trees
 	public static double countBST(int nodes) {
@@ -1422,4 +1423,67 @@ public class Utility {
 		return result;
 		//System.out.println("Number of Binary Search Trees "+possibleBST);
 	}
+	//To store prime no from range
+
+
+	//To store prime anagram numbers to the array
+	public static int[] primeAnagramArray(ArrayList<Integer> al) {
+		int k = 0;
+		int arr[] = new int[170];
+		for (int i = 0; i < al.size(); i++) {
+			for (int j = i + 1; j < al.size(); j++) {
+				if (isAnagram(al.get(i), al.get(j)) == true) // it will check anagram function
+				{
+
+					arr[k] = al.get(i); // stores first anagram number in array
+					k++; // increments index of array
+					arr[k] = al.get(j); // stores second anagram number in array
+					k++; // increments index of array
+				}
+
+			}
+		}
+		return arr; // returns array of prime anagrams
+	}
+
+	public static ArrayList<Integer> primeNoRange(int end) {
+		// TODO Auto-generated method stub
+		int num = 0;
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		for (int i = 1; i <= end; i++) {
+			int counter = 0;
+			for (num = i; num >= 1; num--) {
+				if (i % num == 0)
+					counter = counter + 1;
+			}
+			if (counter == 2)
+				al.add(i); // it will store all prime no is list al
+		}
+		return al;
+
+	}
+	//Remove duplicate elements and store unique elements
+	/**
+	 * @param arr
+	 * @param length
+	 * @return
+	 */
+	public static int removeDuplicatesFromArray(int[] arr, int length) {
+		// TODO Auto-generated method stub
+		if (length == 0 || length == 1) {
+			return length;
+		}
+		int temp[] = new int[length];
+		int j = 0;
+		for (int i = 0; i < length - 1; i++) {
+			if (arr[i] != arr[i + 1])
+				temp[j++] = arr[i];
+		}
+		temp[j++] = arr[length - 1];
+		for (int i = 0; i < j; i++) {
+			arr[i] = temp[i];
+		}
+		return j;
+	}
+	//
 }
