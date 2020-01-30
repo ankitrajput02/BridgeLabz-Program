@@ -11,16 +11,9 @@ public class PrimeAnagram {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		System.out.println("Enter Start number and End Number..");
 		int s=Utility.inputNumber();
 		int e=Utility.inputNumber();
 		Utility.primeAnagram( s , e );
-
-
-
-
 	}
-
-
 }

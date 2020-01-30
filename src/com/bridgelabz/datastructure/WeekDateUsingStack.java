@@ -26,18 +26,22 @@ public class WeekDateUsingStack {
 			for (int i = 0; i < 7; i++) {		
 				System.out.print(calendar[0][i]+"\t");
 				String d=calendar[week][i];
+
 				/*1<-2<-3<-4<-5<-6<-7  PUSH 1*/
 				StackUsingLinkedListUtility.push(d);	//Push data into Stack1
 			}
 
 			for (int i = 0; i < 7; i++) {
+
 				/*1->2->3->4->5->6->7  POP 1*/
 				String data=StackUsingLinkedListUtility.pop();	//Pop data from Stack1
+
 				/*7<-6<-5<-4<-3<-2<-1 PUSH 2*/
 				StackUsingLinkedListUtility2.push(data);	//Push data into Stack2
 			}
 			System.out.println();
 			for (int i = 0; i < 7; i++) {
+
 				/*7->6->5->4->3->2->1 POP 2*/
 				String data=StackUsingLinkedListUtility2.pop();	//Pop data from Stack2
 				System.out.print(data+"\t");

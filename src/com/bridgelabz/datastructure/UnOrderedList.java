@@ -19,17 +19,9 @@ public class UnOrderedList {
 		for(String data: str) {
 			Utility.insertLinkedList(data);
 		}
-		//
 		Utility.printLinkedList();
 		System.out.println("Enter word to search..");
 		String find=Utility.inputString();
 		Utility.findAddOrDelete(find);
-
-
 	}	
-
-
-
-
-
 }
