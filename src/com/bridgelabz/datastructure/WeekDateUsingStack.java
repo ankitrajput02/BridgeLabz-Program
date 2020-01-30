@@ -8,7 +8,7 @@ import com.bridgelabz.utility.Utility;
  *	and the Date (1,2,3..). to store the Queue in two Stacks. Stack here is also implemented using Linked List 
  *	Created By:Ankit Rajput
  */
-public class WeekDataUsingStack {
+public class WeekDateUsingStack {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
