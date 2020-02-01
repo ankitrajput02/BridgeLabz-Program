@@ -1,15 +1,16 @@
 package com.bridgelabz.utility;
 
 import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.InputMismatchException;
+//import java.util.Collection;
+//import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
 
-import com.bridgelabz.datastructure.currentNode;
-import com.bridgelabz.datastructure.UnOrderedList.Node;
+//import com.bridgelabz.datastructure.currentNode;
+//import com.bridgelabz.datastructure.UnOrderedList.Node;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -1017,6 +1018,7 @@ public class Utility {
 	}
 
 	//Program to Check Balance Parenthesis
+	@SuppressWarnings("rawtypes")
 	static Node3 top;
 	static class Node3<E> 
 	{ 
