@@ -6,6 +6,7 @@ import java.util.Arrays;
 //import java.util.Collection;
 //import java.util.InputMismatchException;
 import java.util.LinkedList;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -1487,5 +1488,23 @@ public class Utility {
 		}
 		return j;
 	}
-	//
+	//Object Oriented Programs
+	//Shuffle function to shuffle the Playing cards
+	/**
+	 * @param deck array
+	 */
+	public static void shuffle(String deck[]) {
+		Random rand = new Random(); 
+
+		for (int i = 0; i < deck.length; i++) 
+		{ 
+			// Random for remaining positions. 
+			int r = i + rand.nextInt(deck.length - i); 
+
+			//swapping the elements 
+			String temp = deck[r]; 
+			deck[r] = deck[i]; 
+			deck[i] = temp; 
+		}
+	}
 }
