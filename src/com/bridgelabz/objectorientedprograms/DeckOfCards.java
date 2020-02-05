@@ -1,31 +1,11 @@
 package com.bridgelabz.objectorientedprograms;
-
-import java.util.Random;
-
 import com.bridgelabz.utility.Utility;
-
-
 public class DeckOfCards {
-//	public static void shuffle(String deck[]) {
-//		Random rand = new Random(); 
-//
-//		for (int i = 0; i < deck.length; i++) 
-//		{ 
-//			// Random for remaining positions. 
-//			int r = i + rand.nextInt(deck.length - i); 
-//
-//			//swapping the elements 
-//			String temp = deck[r]; 
-//			deck[r] = deck[i]; 
-//			deck[i] = temp; 
-//		}
-//	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String ranks[] = {"2", "3", "4", "5", "6","7", "8", "9", "10", "J", "Q", "K","A"};
 		String suits[] = {"♣ ", "♦ ", "♥ ", "♠ "};
 		String deck[]=new String[ranks.length*suits.length];
-		//DeckOfCards dc=new DeckOfCards();
 		//Store All cards in the Deck
 		int k=0;
 		for (int i = 0; i < suits.length; i++) {
@@ -64,7 +44,6 @@ public class DeckOfCards {
 			for (int j = 0; j < 4; j++) {	//4 Players
 				distribute[i][j]=deck[count];
 				count++;
-				
 			}
 		}
 		//After Distribution
@@ -76,7 +55,4 @@ public class DeckOfCards {
 			System.out.println();
 		}
 	}
-
-
-
 }

@@ -1,0 +1,23 @@
+[ 
+   { 
+      "inventory1":{ 
+         "price":40,
+         "name":"Pulses",
+         "weight":5
+      }
+   },
+   { 
+      "inventory2":{ 
+         "price":60,
+         "name":"Rice",
+         "weight":10
+      }
+   },
+   { 
+      "inventory3":{ 
+         "price":30,
+         "name":"Wheat",
+         "weight":20
+      }
+   }
+]

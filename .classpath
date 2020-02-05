@@ -6,11 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/admin1/json/jackson-all-1.9.0.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="/home/admin1/json/jackson-core-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/json/jackson-mapper-asl-1.9.13.jar" sourcepath="/home/admin1/json/jackson-mapper-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/json/json-simple-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

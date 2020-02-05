@@ -1,1 +1,24 @@
-[{"inventory":{"price":40,"name":"Pulses","weight":5}},{"inventory":{"price":60,"name":"Rice","weight":10}},{"inventory":{"price":30,"name":"Wheat","weight":20}}]
+[
+{
+"inventory":
+	{
+	"price":40,
+	"name":"Pulses",
+	"weight":5
+	}
+},{
+"inventory":
+	{
+	"price":60,
+	"name":"Rice",
+	"weight":10
+	}
+},{
+"inventory":
+	{
+	"price":30,
+	"name":"Wheat",
+	"weight":20
+	}
+}
+]

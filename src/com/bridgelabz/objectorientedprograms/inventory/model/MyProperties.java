@@ -1,13 +1,16 @@
 package com.bridgelabz.objectorientedprograms.inventory.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 /**
  * Purpose: To set and the data to fields
  * 
  */
-public class Properties {
+@JsonIgnoreProperties(ignoreUnknown=true)
+public class MyProperties {
 
 	String name;
-	long weight;
+	int weight;
 	float price;
 	public String getName() {
 		return name;
@@ -15,10 +18,10 @@ public class Properties {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public long getWeight() {
+	public int getWeight() {
 		return weight;
 	}
-	public void setWeight(long weight) {
+	public void setWeight(int weight) {
 		this.weight = weight;
 	}
 	public float getPrice() {
@@ -29,7 +32,7 @@ public class Properties {
 	}
 	@Override
 	public String toString() {
-		return "Properties [name=" + name + ", weight=" + weight + ", price=" + price + "]";
+		return "MyProperties [name=" + name + ", weight=" + weight + ", price=" + price + "]";
 	}
 	
 	

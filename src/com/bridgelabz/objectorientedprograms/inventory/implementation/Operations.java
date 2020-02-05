@@ -2,8 +2,7 @@ package com.bridgelabz.objectorientedprograms.inventory.implementation;
 
 import java.util.InputMismatchException;
 import java.util.List;
-
-import com.bridgelabz.objectorientedprograms.inventory.model.Properties;
+import com.bridgelabz.objectorientedprograms.inventory.model.MyProperties;
 import com.bridgelabz.objectorientedprograms.inventory.utility.Utility;
 
 /**
@@ -12,20 +11,20 @@ import com.bridgelabz.objectorientedprograms.inventory.utility.Utility;
  */
 public class Operations {
 
-	public List<Properties> addInventory(List<Properties> list) { //method to add new inventory
-		Properties properties = new Properties();
+	public List<MyProperties> addInventory(List<MyProperties> list) { //method to add new inventory
+		MyProperties myProperties = new MyProperties();
 		try {
 			//taking data from user
 			System.out.println("Enter name of inventory: ");
-			properties.setName(Utility.stringValidation(Utility.inputString()));
+			myProperties.setName(Utility.stringValidation(Utility.inputString()));
 			System.out.println("Enter weight of inventory: ");
-			properties.setWeight(Utility.inputNumber());
+			myProperties.setWeight(Utility.inputNumber());
 			System.out.println("Enter price of inventory: ");
-			properties.setPrice(Utility.inputFloat());
+			myProperties.setPrice(Utility.inputFloat());
 		} catch (InputMismatchException e) {
 			System.out.println("enter valid input!");
 		}
-		list.add(properties);	//adding data to list of inventory
+		list.add(myProperties);	//adding data to list of inventory
 		System.out.println("Inventory added successfully\nTo continue adding press 1\nTo exit press 0 ");
 		int a = Utility.inputNumber();
 		if (a == 1)
@@ -33,7 +32,7 @@ public class Operations {
 		return list;	//returning list of inventory data
 	}
 
-	public List<Properties> removeInventory(List<Properties> list) {	//method to remove inventory data
+	public List<MyProperties> removeInventory(List<MyProperties> list) {	//method to remove inventory data
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i).getName()); //showing available inventories
 		}
@@ -59,7 +58,7 @@ public class Operations {
 
 	}
 
-	public void calculations(List<Properties> list) {	//method to calculate price of inventory
+	public void calculations(List<MyProperties> list) {	//method to calculate price of inventory
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i).getName()); //showing all inventories
 		}
