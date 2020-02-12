@@ -1,0 +1,21 @@
+[{
+  "name":"Union Bank",
+  "price":349.4,
+  "share":410.0
+  },{
+  "name":"HDFC",
+  "price":129.5,
+  "share":510.0
+  },{
+  "name":"yes Bank",
+  "price":67.1,
+  "share":341.0
+  },{
+  "name":"Axis Bank",
+  "price":663.3,
+  "share":500.0
+  },{
+  "name":"Idea",
+  "price":8.42,
+  "share":450.0
+  }]
