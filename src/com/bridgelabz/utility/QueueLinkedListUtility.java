@@ -5,10 +5,12 @@ package com.bridgelabz.utility;
  *
  */
 public class QueueLinkedListUtility {
+	@SuppressWarnings("rawtypes")
 	static Node head;
 
 	public static class Node<E> {
 		E data;
+		@SuppressWarnings("rawtypes")
 		Node next;
 
 		public Node(E data) {
@@ -21,8 +23,11 @@ public class QueueLinkedListUtility {
 	 * @param <E>
 	 * @param data
 	 */
+	@SuppressWarnings("unchecked")
 	public static <E> void enqueue(E data) {
+		@SuppressWarnings("rawtypes")
 		Node temp;
+		@SuppressWarnings("rawtypes")
 		Node node = new Node(data);
 		if (head == null) {
 			head = node;
@@ -35,8 +40,11 @@ public class QueueLinkedListUtility {
 		}
 	}
 	//Add data to queue from front
+	@SuppressWarnings("unchecked")
 	public static <E> void enqueueFront(E data) {
+		@SuppressWarnings("rawtypes")
 		Node temp;
+		@SuppressWarnings("rawtypes")
 		Node node = new Node(data);
 		if (head == null) {
 			head = node;
@@ -48,7 +56,9 @@ public class QueueLinkedListUtility {
 	}
 	//Add data to Queue from rear
 	public static <E> void enqueueRear(E data) {
+		@SuppressWarnings("rawtypes")
 		Node temp;
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		Node node = new Node(data);
 		if (head == null) {
 			head = node;
@@ -61,6 +71,7 @@ public class QueueLinkedListUtility {
 		}
 	}
 	//To remove data from queue
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static <E> E dequeue() {
 		E data = null;
 		if (!isEmpty()) {
@@ -73,6 +84,7 @@ public class QueueLinkedListUtility {
 		return data;
 	}
 	//To remove data from front of queue
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static <E> E dequeueFront() {
 		E data = null;
 		if (!isEmpty()) {
@@ -86,10 +98,13 @@ public class QueueLinkedListUtility {
 
 	}
 	//To remove data from rear of queue
+	@SuppressWarnings("unchecked")
 	public static <E> E dequeueRear() {
 		E data = null;
 		if (!isEmpty()) {
+			@SuppressWarnings("rawtypes")
 			Node temp = head;
+			@SuppressWarnings("rawtypes")
 			Node prev = temp;
 			while (temp.next != null) {
 				prev = temp;
@@ -112,6 +127,7 @@ public class QueueLinkedListUtility {
 	//to print queue
 	public static void printQueue() {
 		if (!isEmpty()) {
+			@SuppressWarnings("rawtypes")
 			Node temp = head;
 			while (temp != null) {
 				System.out.print(temp.data +"\t");

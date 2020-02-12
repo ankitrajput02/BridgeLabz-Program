@@ -1024,6 +1024,7 @@ public class Utility {
 	static class Node3<E> 
 	{ 
 		E data; 
+		@SuppressWarnings("rawtypes")
 		Node3 next; 
 		public Node3(E data) 
 		{ 
@@ -1031,6 +1032,7 @@ public class Utility {
 			next = null; 
 		} 
 	}
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static <E> void push(E data) {
 		//@SuppressWarnings("unchecked")
 		Node3 n = new Node3(data);
@@ -1049,8 +1051,11 @@ public class Utility {
 
 
 	}
+	@SuppressWarnings("unchecked")
 	public static <E> E pop() {
+		@SuppressWarnings("rawtypes")
 		Node3 temp=top;
+		@SuppressWarnings("rawtypes")
 		Node3 prev=temp;
 		E data=null;
 		if(isEmpty()) {
@@ -1506,5 +1511,22 @@ public class Utility {
 			deck[r] = deck[i]; 
 			deck[i] = temp; 
 		}
+	}
+	
+	public static String[] shuffleCardsDeck(String[] arr) {
+		Random random = new Random();
+		int f1, f2;
+		String temp;
+		for (int i = 0; i < 52; i++) {
+			f1 = random.nextInt(51);
+			f2 = random.nextInt(51);
+			if (f1 != f2) {
+				temp = arr[f1];
+				arr[f1] = arr[f2];
+				arr[f2] = temp;
+			}
+		}
+		return arr;
+
 	}
 }

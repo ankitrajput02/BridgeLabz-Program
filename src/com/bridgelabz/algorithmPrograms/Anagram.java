@@ -12,7 +12,7 @@ public class Anagram {
 		// TODO Auto-generated method stub
 		System.out.println("Enter First String");
 		String str1=Utility.inputString();
-		System.out.println("Enter First String");
+		System.out.println("Enter Second String");
 		String str2=Utility.inputString();
 		
 		if(str1.length()==str2.length()){
