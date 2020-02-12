@@ -1,0 +1,67 @@
+[ {
+  "patientName" : "Kunal",
+  "pID" : 1,
+  "phone" : 9876543210,
+  "age" : 24,
+  "assignDoctor" : null
+}, {
+  "patientName" : "Shruti",
+  "pID" : 5,
+  "phone" : 9524786100,
+  "age" : 23,
+  "assignDoctor" : null
+}, {
+  "patientName" : "Rutuja",
+  "pID" : 9,
+  "phone" : 9999003210,
+  "age" : 23,
+  "assignDoctor" : null
+}, {
+  "patientName" : "Vishal",
+  "pID" : 10,
+  "phone" : 9888777666,
+  "age" : 24,
+  "assignDoctor" : null
+}, {
+  "patientName" : "Vicky",
+  "pID" : 12,
+  "phone" : 9881455466,
+  "age" : 26,
+  "assignDoctor" : null
+}, {
+  "patientName" : "Rahul",
+  "pID" : 15,
+  "phone" : 8495627310,
+  "age" : 21,
+  "assignDoctor" : null
+}, {
+  "patientName" : "DVicky",
+  "pID" : 56,
+  "phone" : 9876522222,
+  "age" : 20,
+  "assignDoctor" : null
+}, {
+  "patientName" : "Sharma",
+  "pID" : 75,
+  "phone" : 8484848484,
+  "age" : 55,
+  "assignDoctor" : null
+}, {
+  "patientName" : "Sai",
+  "pID" : 45,
+  "phone" : 9685741230,
+  "age" : 23,
+  "assignDoctor" : "Patel"
+}, {
+  "patientName" : "jay",
+  "pID" : 54,
+  "phone" : 9657848484,
+  "age" : 54,
+  "assignDoctor" : "Patel"
+}, {
+  "patientName" : "KunalParate",
+  "pID" : 90,
+  "phone" : 9988554411,
+  "age" : 21,
+  "assignDoctor" : "Dr.Kulkarni"
+} ]

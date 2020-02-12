@@ -1,0 +1,31 @@
+[ {
+  "dName" : "Dr.kapil",
+  "dID" : 100,
+  "spec" : "MBBS",
+  "avail" : "AM",
+  "doctorAppointment" : 0
+}, {
+  "dName" : "Dr.Patil",
+  "dID" : 101,
+  "spec" : "BHMS",
+  "avail" : "PM",
+  "doctorAppointment" : 0
+}, {
+  "dName" : "Dr.Chaudhari",
+  "dID" : 102,
+  "spec" : "BDS",
+  "avail" : "AM",
+  "doctorAppointment" : 0
+}, {
+  "dName" : "Dr.Kulkarni",
+  "dID" : 105,
+  "spec" : "MD",
+  "avail" : "AM PM",
+  "doctorAppointment" : 1
+}, {
+  "dName" : "Patel",
+  "dID" : 45,
+  "spec" : "BDS",
+  "avail" : "AM",
+  "doctorAppointment" : 2
+} ]

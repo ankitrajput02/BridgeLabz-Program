@@ -1,0 +1,25 @@
+[ {
+  "fName" : "Ankit",
+  "lName" : "Rajput",
+  "address" : "thane",
+  "city" : "Mumbai",
+  "zip" : 425455,
+  "state" : "Maharashtra",
+  "phone" : 9876543210
+}, {
+  "fName" : "Kunal",
+  "lName" : "Parate",
+  "address" : "vashi",
+  "city" : "Mumbai",
+  "zip" : 425001,
+  "state" : "Maharashtra",
+  "phone" : 4685334712
+}, {
+  "fName" : "vicky",
+  "lName" : "dhayade",
+  "address" : "jalgaon",
+  "city" : "nasik",
+  "zip" : 425408,
+  "state" : "mh",
+  "phone" : 9988554466
+} ]

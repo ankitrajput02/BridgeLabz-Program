@@ -1,0 +1,29 @@
+[ {
+  "companyName" : "Reliance",
+  "noOfShares" : 400,
+  "price" : 325.5
+}, {
+  "companyName" : "Idea",
+  "noOfShares" : 275,
+  "price" : 250.6
+}, {
+  "companyName" : "Airtel",
+  "noOfShares" : 610,
+  "price" : 200.2
+}, {
+  "companyName" : "BSNL",
+  "noOfShares" : 400,
+  "price" : 220.2
+}, {
+  "companyName" : "Vodafone",
+  "noOfShares" : 250,
+  "price" : 150.5
+}, {
+  "companyName" : "vodafone",
+  "noOfShares" : 260,
+  "price" : 210.1
+}, {
+  "companyName" : "Aircel",
+  "noOfShares" : 500,
+  "price" : 125.3
+} ]

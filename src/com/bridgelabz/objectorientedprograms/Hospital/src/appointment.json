@@ -1,0 +1,49 @@
+[ {
+  "doctorName" : "Dr.Kapil",
+  "patientName" : "Kunal",
+  "patientID" : 1,
+  "doctorSpecialization" : "BHMS",
+  "doctorAvailability" : "AM",
+  "doctorAppointment" : 3,
+  "phone" : 9876543210
+}, {
+  "doctorName" : "Dr.Chaudhari",
+  "patientName" : "Shruti",
+  "patientID" : 5,
+  "doctorSpecialization" : "BDS",
+  "doctorAvailability" : "AM",
+  "doctorAppointment" : 2,
+  "phone" : 9685741230
+}, {
+  "doctorName" : "Dr.Kulkarni",
+  "patientName" : "Vishal",
+  "patientID" : 10,
+  "doctorSpecialization" : "MD",
+  "doctorAvailability" : "PM",
+  "doctorAppointment" : 1,
+  "phone" : 8975421000
+}, {
+  "doctorName" : null,
+  "patientName" : "Sai",
+  "patientID" : 9,
+  "doctorSpecialization" : "BDS",
+  "doctorAvailability" : "AM",
+  "doctorAppointment" : 1,
+  "phone" : 0
+}, {
+  "doctorName" : null,
+  "patientName" : "jay",
+  "patientID" : 10,
+  "doctorSpecialization" : "BDS",
+  "doctorAvailability" : "AM",
+  "doctorAppointment" : 2,
+  "phone" : 0
+}, {
+  "doctorName" : "Dr.Kulkarni",
+  "patientName" : "KunalParate",
+  "patientID" : 11,
+  "doctorSpecialization" : "MD",
+  "doctorAvailability" : "AM PM",
+  "doctorAppointment" : 1,
+  "phone" : 0
+} ]

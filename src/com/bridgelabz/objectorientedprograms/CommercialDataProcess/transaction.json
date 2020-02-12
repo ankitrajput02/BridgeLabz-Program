@@ -1,0 +1,22 @@
+[ {
+  "companyName" : "Idea",
+  "noOfCompanyShares" : 275,
+  "customerName" : "Raj",
+  "noOfCustomerShares" : 100,
+  "datetime" : {
+    "nano" : 770555000,
+    "year" : 2020,
+    "monthValue" : 2,
+    "dayOfMonth" : 8,
+    "hour" : 16,
+    "minute" : 33,
+    "second" : 37,
+    "dayOfWeek" : "SATURDAY",
+    "dayOfYear" : 39,
+    "month" : "FEBRUARY",
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  }
+} ]

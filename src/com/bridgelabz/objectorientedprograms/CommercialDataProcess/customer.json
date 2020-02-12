@@ -1,0 +1,25 @@
+[ {
+  "custName" : "Ankit",
+  "noOfShares" : 15,
+  "price" : 200.5
+}, {
+  "custName" : "Kunal",
+  "noOfShares" : 40,
+  "price" : 210.2
+}, {
+  "custName" : "Vishal",
+  "noOfShares" : 60,
+  "price" : 90.5
+}, {
+  "custName" : "Vicky",
+  "noOfShares" : 150,
+  "price" : 98.99
+}, {
+  "custName" : "Ajay",
+  "noOfShares" : 60,
+  "price" : 140.3
+}, {
+  "custName" : "Raj",
+  "noOfShares" : 100,
+  "price" : 0.0
+} ]
